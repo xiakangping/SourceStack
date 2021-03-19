@@ -3,28 +3,123 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <link rel="stylesheet" href="/css/font-awesome.css" />
+    <style>
+        section {
+            border-top: 2px dashed;
+            border-right: 2px dashed;
+            border-bottom: 2px dashed;
+            border-left: 2px dashed;
+            padding: 0px 10px 0px 10px; 
+            background-color:#ffffe0;
+            border: 2px dashed #eee
+        }
+        label {
+            display: inline-block;
+            max-width: 100%;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-control {
+            width: 100%;
+            padding: 6px 14px;
+            border-radius: 4px;
+            border: 1px solid #ccc
+        }
+        a:hover {
+            text-decoration: underline
+        }
+        a {
+            color: #337ab7;
+            font-size: 14px
+        }
+    </style>
 </head>
+
 <body>
-    <h1>注册</h1>
-    <hr/>
+    <h2 style="font-size:30px;font-weight: 500">
+        <span class="fa fa-registered"></span>
+        <span>注册</span>
+    </h2>
+    <hr />
     <form>
-        <label>邀请人：（* 必填，没有邀请人）</label><br />
-        <input type="text" /><br />
-        <label>邀请码：（* 必填）</label><br />
-        <input type="text" /><br />
-        <label>用户名：（* 必填）</label><br />
-        <input type="text" name="username" /><br />
-        <label>密码：（* 必填）</label><br />
-        <input type="password" name="password" /><br />
-        <label>验证密码：（* 必填）</label><br />
-        <input type="password" name="password" /><br />
-        <label>验证码：（* 必填）</label><br />
-        <input type="password" name="password" />点击输入框显示<br />
-        <button type="submit">提交</button>
-        <button type="reset">重置</button>
+        <header>
+            <section>
+                <div class="text-right">
+                    <span class="fa fa-question-circle"></span>
+                    <span>为什么需要邀请</span>
+                </div>
+                <div>
+                    <label>邀请人：（* 必填，没有邀请人）</label><br />
+                    <input type="text" placeholder="他的用户名，模糊查询只能从头开始" class="form-control" /><br />
+                    <label>邀请码：（* 必填）</label><br />
+                    <input type="text" placeholder="4位数字" class="form-control" /><br />
+                </div>
+            </section>
+            <div>
+                <label>用户名：（* 必填）</label><br />
+                <input type="text" name="username" placeholder="登录用户名，可修改不可重复" class="form-control" /><br />
+            </div>
+            <div>
+                <label>密码：（* 必填）</label><br />
+                <input type="password" name="password" placeholder="不少于4个字符" class="form-control" /><br />
+            </div>
+            <div>
+                <label>验证密码：（* 必填）</label><br />
+                <input type="password" name="password" placeholder="和密码相同" class="form-control" /><br />
+            </div>
+            <div>
+                <label>验证码：（* 必填）</label><br />
+                <input type="password" name="password" class="form-control" />点击输入框显示<br />
+            </div>
+            <div>
+                <button type="submit">提交</button>
+                <button type="reset">重置</button>
+                <span class="fa fa-sign-in" style="text-align:right">登录</span>
+            </div>
+        </header>
+        <aside>
+            <h3 style="font-size:24px;color: #31708f;font-weight: 500">
+                <span class="fa fa-question-circle "></span>说明
+            </h3>
+            <ol>
+                <li>
+                    我们希望通过一起帮，能直接解决大家在电脑操作/软件使用/编程学习等方面的具体问题.
+                </li>
+                <li>
+                    现在互联网远程技术（比如QQ桌面共享）已经非常成熟，当我们再遇到上述问题，如果别人能直接远程给予帮助，岂不是好？
+                </li>
+                <li>
+                    当然，你也可以在你熟悉的领域去帮助别人。由此而形成我们这个“你帮他他帮我我帮你，大家一起帮”的网上互助社区平台。
+                </li>
+                <li>
+                    公平起见，我们还引入了 帮帮点/币/豆 三级概念，以记录和衡量社区成员的收获和贡献。
+                </li>
+                <li>
+                    赶快加入我们，赚取帮帮币吧！
+                </li>
+                <li>
+                    <span class="fa fa-hand-o-right"></span>了解更多
+                </li>
+            </ol>
+        </aside>
+        <footer>
+            <hr />
 
+        </footer>
     </form>
-
+    <a>关于我们</a>|
+    <a>源栈课堂 </a>|
+    <a>常见问题</a>|
+    <a>意见建议</a>|
+    <a>历史通知</a>|
+    <a>友情捐赠</a>|
+    <a>诚邀合伙人</a>|
+    <samp style="float:right">
+        <a>渝ICP备18007191号（备案）</a>
+        © 2021 - 自由
+        <img src="/image/freeflying.ico" />
+    </samp>
 
 </body>
 </html>
