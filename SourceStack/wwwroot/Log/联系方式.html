@@ -3,22 +3,57 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <link rel="stylesheet"href="/css/font-awesome.css" />
+    <style>
+        .color {
+            color: #fff;
+            background-color: #337ab7;
+            border-color: #2e6da4;
+            padding: 6px 12px;
+            border-radius: 4px;
+            border: 1px solid transparent;
+        }
+        .font {
+            border: 1px solid #ccc;
+            padding: 6px 12px;
+            width: 100%;
+            height: 34px;
+            border-radius: 4px;
+        }
+        article label {
+            font-size: 14px;
+            color: #333;
+        }
+        .h2,.h3 {
+            font-family: inherit;
+            font-weight: 500;
+        }
+    </style>
 </head>
 <body>
-    <h1> 联系方式录入</h1>
+    <article style="float:left;width:40%">
+    <h2><span class="fa fa-envelope"></span> 联系方式录入</h2>
     <hr/>
     <form>
         <label>QQ:</label><br />
-        <input type="text" /><br />
+        <input type="text"class="font" placeholder="建议填写"/><br />
         <label>微信：</label><br />
-        <input type="text" /><br />
+        <input type="text" class="font"placeholder="建议填写"/><br />
         <label>电话:</label><br />
-        <input type="text"/><br />
+        <input type="text"class="font"placeholder="请谨慎考虑填写"/><br />
         <label>其他:</label><br />
-        <textarea cols="30"rows="10"name="selfDescription"></textarea><br />
-        <button type="submit">提交</button><br />
+        <textarea cols="30"rows="10"name="selfDescription"style="border-radius: 4px;"placeholder="需要说明的情况，比如加QQ"></textarea><br />
+        <button type="submit"class="color">提交</button>
+        <span class="fa fa-info-circle"style="color:#31708f"></span>
+        <span style="font-size: 14px;color:#31708f">成功激活后自动返回之前页面</span>
+        
     </form>
-
-
+        </article>
+    <aside>
+        <h3>
+            <span class="fa fa-question-circle "></span>
+            说明
+        </h3>
+    </aside>
 </body>
 </html>
