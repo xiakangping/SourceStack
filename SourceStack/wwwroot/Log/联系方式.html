@@ -16,7 +16,7 @@
         .font {
             border: 1px solid #ccc;
             padding: 6px 12px;
-            width: 100%;
+            width: 80%;
             height: 34px;
             border-radius: 4px;
         }
@@ -28,32 +28,54 @@
             font-family: inherit;
             font-weight: 500;
         }
+        ol li {
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
-    <article style="float:left;width:40%">
-    <h2><span class="fa fa-envelope"></span> 联系方式录入</h2>
-    <hr/>
-    <form>
-        <label>QQ:</label><br />
-        <input type="text"class="font" placeholder="建议填写"/><br />
-        <label>微信：</label><br />
-        <input type="text" class="font"placeholder="建议填写"/><br />
-        <label>电话:</label><br />
-        <input type="text"class="font"placeholder="请谨慎考虑填写"/><br />
-        <label>其他:</label><br />
-        <textarea cols="30"rows="10"name="selfDescription"style="border-radius: 4px;"placeholder="需要说明的情况，比如加QQ"></textarea><br />
-        <button type="submit"class="color">提交</button>
-        <span class="fa fa-info-circle"style="color:#31708f"></span>
-        <span style="font-size: 14px;color:#31708f">成功激活后自动返回之前页面</span>
-        
-    </form>
+    <article>
+        <h2><span class="fa fa-envelope"></span> 联系方式录入</h2>
+        <hr />
+       
+            <form style="float:left;width:40%">
+                <label>QQ:</label><br />
+                <input type="text" class="font" placeholder="建议填写" /><br />
+                <label>微信：</label><br />
+                <input type="text" class="font" placeholder="建议填写" /><br />
+                <label>电话:</label><br />
+                <input type="text" class="font" placeholder="请谨慎考虑填写" /><br />
+                <label>其他:</label><br />
+                <textarea cols="30" rows="10" name="selfDescription" style="border-radius: 4px;" placeholder="需要说明的情况，比如加QQ"></textarea><br />
+                <button type="submit" class="color">提交</button>
+                <span class="fa fa-info-circle" style="color:#31708f"></span>
+                <span style="font-size: 14px;color:#31708f">成功激活后自动返回之前页面</span>
+
+            </form>
         </article>
-    <aside>
-        <h3>
-            <span class="fa fa-question-circle "></span>
-            说明
-        </h3>
-    </aside>
+        <aside style="float:left;width:50%">
+            <h3 style="font-size:24px;color: #31708f;">
+                <span class="fa fa-question-circle "></span>
+                说明
+            </h3>
+            <ol>
+                <li>
+                    Email非常重要，可用于重置密码、接受用户消息（可设置取消）等，强烈建议填写。
+                </li>
+                <li>
+                    Email填写之后系统稍后会发送一封确认邮件到该地址，请注意查收，建议将system@17help.net加入白名单，以避免被当做垃圾邮件过滤掉。
+                </li>
+                <li>
+                    因为联系方式会公开显示，我们不建议你填写电话号码，以免个人信息被泄露。
+                </li>
+                <li>
+                    所以我们推荐使用QQ/微信等网络通信方式。
+                </li>
+                <li>
+                    注意填写QQ作为联系方式时，不要忘了留下“添加好友”的验证条件。
+                </li>
+            </ol>
+            
+        </aside>
 </body>
 </html>
