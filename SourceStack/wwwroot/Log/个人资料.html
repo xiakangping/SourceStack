@@ -3,73 +3,89 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
     <link rel="stylesheet" href="/css/font-awesome.css" />
+    <style>
+        .form {
+            border-radius: 4px;
+            width: 60%;
+            border: 1px solid #ccc;
+            padding: 8px 12px;
+        }
+        .color {
+            background-color: #eee;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+    </style>
 </head>
      
-    <body>
-    
-        <h1>个人资料</h1><br />
-        <hr />
-        <form>
-            <label>头像：（* 仅限jpg/png/gif）</label><br />
-            <input type="text" /><button>浏览</button><br />
-            <label>性别：</label>
-            <label><input type="radio" name="gender" value="male" />男</label>
-            <label><input type="radio" name="gender" value="female" />女</label><br />
-            <label>生日:</label><br />
-            <select>
-                <option value="1995">1995</option>
-                <option value="1996">1996</option>
-                <option value="1997">1997</option>
-            </select>
-            <label>年</label>
-            <select>
-                <option value="10">10</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
-            </select>
-            <label>月</label>
-            <select>
-                <option value="射手">射手</option>
-                <option value="摩羯">摩羯</option>
-                <option value="天蝎">天蝎</option>
-            </select>
-            <label>星座</label><br />
-            <label>关键字：（* 使用空格分隔）</label><br />
-            <label>---1级---</label>
-            <select>
-                <option>编程开发语言</option>
-                <option>工具软件</option>
-                <option>顾问咨询</option>
-                <option>操作系统</option>
-            </select>
-            <label>---2级---</label>
-            <select>
-                <option>C#</option>
-                <option>JAVA</option>
-                <option>Javasceipt</option>
-                <option>html</option>
-                <option>Python</option>
-                <option>SQL</option>
-                <option>CSS</option>
-                <option>PHP</option>
-                <option>C++</option>
-                <option>C</option>
-            </select>
-            <aside style="float:right">
-                <h1>说明</h1>
-                <ol>
-                    <li>头像仅接受jpg/png/gif格式，大小不超过256KB。</li>
-                    <li>头像图片的建议宽度为300像素左右，过宽或过窄都有可能失真。</li>
-                    <li>自我介绍的字数不要超过255字。</li>
-                </ol>
-            </aside>
+<body>
+    <h2>
+    <span class="fa fa-user-circle-o"></span>
+    个人资料
+    </h2>
+    <hr />
+    <form style="float:left;width:45%">
+        <label>头像：（* 仅限jpg/png/gif）</label><br />
+        <input type="text"class="form"placeholder="页面提交时上传文件" />
+        <button class="color">浏览</button><br />
+        <label>性别：</label>
+        <label><input type="radio" name="gender" value="male" />男</label>
+        <label><input type="radio" name="gender" value="female" />女</label><br />
+        <label >生日:</label><br />
+        <select class="form"style="width:15%">
+            <option value="1995">1995</option>
+            <option value="1996" >1996</option>
+            <option value="1997">1997</option>
+        </select>
+        <label class="color">年</label>
+        <select class="form"style="width:15%">
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <label class="color">月</label>
+        <select class="form"style="width:15%">
+            <option value="射手">射手</option>
+            <option value="摩羯">摩羯</option>
+            <option value="天蝎">天蝎</option>
+        </select>
+        <label class="color">星座</label><br />
+        <label>关键字：（* 使用空格分隔）</label><br />
+        <label>---1级---</label>
+        <select class="form"style="width:20%">
+            <option>编程开发语言</option>
+            <option>工具软件</option>
+            <option>顾问咨询</option>
+            <option>操作系统</option>
+        </select>
+        <label>---2级---</label>
+        <select class="form"style="width:20%">
+            <option>C#</option>
+            <option>JAVA</option>
+            <option>Javasceipt</option>
+            <option>html</option>
+            <option>Python</option>
+            <option>SQL</option>
+            <option>CSS</option>
+            <option>PHP</option>
+            <option>C++</option>
+            <option>C</option>
+        </select>
+        <aside style="float:right">
+            <h1>说明</h1>
+            <ol>
+                <li>头像仅接受jpg/png/gif格式，大小不超过256KB。</li>
+                <li>头像图片的建议宽度为300像素左右，过宽或过窄都有可能失真。</li>
+                <li>自我介绍的字数不要超过255字。</li>
+            </ol>
+        </aside>
 
 
 
-        </form>
+    </form>
 
 </body>
 </html>
