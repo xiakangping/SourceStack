@@ -18,15 +18,21 @@
             border: 1px solid #ccc;
             border-radius: 4px;
         }
+        .font {
+            font-size: 24px;
+            font-weight: 500;
+        }
     </style>
 </head>
      
 <body>
-    <h2>
-    <span class="fa fa-user-circle-o"></span>
-    个人资料
+    <header>
+    <h2 class="font">
+        <span class="fa fa-user-circle-o"></span>
+        个人资料
     </h2>
     <hr />
+    </header>
     <article style="float:left;width:45%">
         <label>头像：（* 仅限jpg/png/gif）</label><br />
         <input type="text" class="form" placeholder="页面提交时上传文件" />
@@ -55,14 +61,14 @@
         <label class="color">星座</label><br />
         <label>关键字：（* 使用空格分隔）</label><br />
         <label>---1级---</label>
-        <select class="form" style="width:20%">
+        <select class="form" style="width:15%">
             <option>编程开发语言</option>
             <option>工具软件</option>
             <option>顾问咨询</option>
             <option>操作系统</option>
         </select>
         <label>---2级---</label>
-        <select class="form" style="width:20%">
+        <select class="form" style="width:15%">
             <option>C#</option>
             <option>JAVA</option>
             <option>Javasceipt</option>
@@ -74,20 +80,26 @@
             <option>C++</option>
             <option>C</option>
         </select>
-        
+        <input type="text" class="form" style="width:15%" placeholder="自定义关键字" /><br />
+        <label>自我介绍:</label><br />
+        <textarea cols="65" rows="10" name="selfDescription" style="border-radius: 4px;" placeholder="简单介绍一下自己，不超过255字"></textarea><br />
+        <button type="submit" class="color"style="background-color: #337ab7;color: #fff">提交</button>
     </article>
-        <aside style="float:right">
-            <h1 style="float:left;width:40%">说明</h1>
-            <ol>
-                <li>头像仅接受jpg/png/gif格式，大小不超过256KB。</li>
-                <li>头像图片的建议宽度为300像素左右，过宽或过窄都有可能失真。</li>
-                <li>自我介绍的字数不要超过255字。</li>
-            </ol>
-        </aside>
+    <aside>
+        <h1 style="color: #31708f" class="font">
+            <span class="fa fa-question-circle "></span>
+            说明
+        </h1>
+        <ol style="float:left">
+            <li>头像仅接受jpg/png/gif格式，大小不超过256KB。</li>
+            <li>头像图片的建议宽度为300像素左右，过宽或过窄都有可能失真。</li>
+            <li>自我介绍的字数不要超过255字。</li>
+        </ol>
+    </aside>
 
 
 
-    </form>
+
 
 </body>
 </html>
