@@ -10,47 +10,56 @@
 
         button {
             color: #337ab7 !important;
-            background-color:#fff!important;
-            
+            background-color: #fff !important;
         }
-        ul li{
+
+        ul li {
             list-style: none;
         }
+
         h4 {
             color: #333ab7;
             font-size: 18px
         }
-        .float{
-            float: right ;
+
+        .float {
+            float: right;
         }
-        .margin{
+
+        .margin {
             margin-left: 14px;
         }
+
         .bold {
             font-weight: bold;
-            font-size:14px
+            font-size: 14px
         }
+
         .font {
             font-size: 12px;
             font-weight: bold;
             color: #fff;
         }
+
         .big {
             color: #fff;
             font-size: 24px !important;
             margin: 5px 20px 5px 0px;
         }
+
         .circle {
             width: 120px;
             height: 30px;
             border: 1px solid;
-            border-radius:5%
+            border-radius: 5%
         }
+
         .color {
             padding: 4px 8px;
             color: #fff;
             border-radius: 4px;
         }
+
         .tab {
             border-top: 1px dashed #ddd;
             border-left: 1px dashed #ddd;
@@ -59,35 +68,38 @@
             padding: 20px;
             margin-bottom: 30px;
         }
-        th{
+
+        th {
             text-align: left
         }
-        td{
-            text-align:right
+
+        td {
+            text-align: right
         }
+
         .fixed {
-            position:fixed;
+            position: fixed;
             background-color: rgba(128,255,212,.7);
             padding: 5px 7px;
         }
     </style>
 
     <link rel="stylesheet" href="/css/font-awesome.css" />
-    <link rel="stylesheet"href="/lib/bootstrap/dist/css/bootstrap.css" />
-    <meta name="viewport"content="width=device-width,inital-scale=1,shrink-to-fit=no"/>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+    <meta name="viewport" content="width=device-width,inital-scale=1,shrink-to-fit=no" />
 </head>
 <body>
     <header>
-    <div style="background-color:#eee;">
-        <span class="fa fa-calendar"></span>
-        <span class="fa fa-thumbs-o-up"></span>
-        <span>文章的评论叶飞老师，我之前就是看你的文章学的SQL，非常感谢...被uao赞，获得</span>
-        <span class="fa fa-free-code-camp"></span>
-        <span>帮帮点&nbsp奖励2点</span>
-        <span style="float:right">全部消息</span>
-    </div>
+        <div style="background-color:#eee;">
+            <span class="fa fa-calendar"></span>
+            <span class="fa fa-thumbs-o-up"></span>
+            <span>文章的评论叶飞老师，我之前就是看你的文章学的SQL，非常感谢...被uao赞，获得</span>
+            <span class="fa fa-free-code-camp"></span>
+            <span>帮帮点&nbsp奖励2点</span>
+            <span style="float:right">全部消息</span>
+        </div>
     </header>
-    <article style="float:left!important;width:56%">
+    <main style="float:left!important;width:56%">
 
         <ul>
             <li>
@@ -103,10 +115,10 @@
                 <span class="badge rounded-pill bg-secondary font">程序员</span>
                 <span class="badge rounded-pill bg-secondary font">历史</span>
                 <div class="float">
-                    <a class="margin">
+                    <span class="margin">
                         <span class="fa fa-comments-o"></span>
-                        <span>评论:</span>
-                    </a>
+                        评论:
+                    </span>
                     <a class="margin">
                         <span class="fa fa-thumbs-o-up"></span>
                         <span>赞:</span>
@@ -133,10 +145,10 @@
                 <span class="badge rounded-pill bg-secondary font">数学</span>
                 <span class="badge rounded-pill bg-secondary font">历史</span>
                 <div class="float">
-                    <a class="margin">
+                    <span class="margin">
                         <span class="fa fa-comments-o"></span>
-                        <span>评论:</span>
-                    </a>
+                        评论:
+                    </span>
                     <a class="margin">
                         <span class="fa fa-thumbs-o-up"></span>
                         <span>赞:</span>
@@ -160,10 +172,10 @@
                 <span class="badge rounded-pill bg-secondary font">图像</span>
                 <span class="badge rounded-pill bg-secondary font">门电路</span>
                 <div class="float">
-                    <a class="margin">
+                    <span class="margin">
                         <span class="fa fa-comments-o"></span>
-                        <span>评论:</span>
-                    </a>
+                        评论:
+                    </span>
                     <a class="margin">
                         <span class="fa fa-thumbs-o-up"></span>
                         <span>赞:</span>
@@ -188,10 +200,10 @@
                 <span class="badge rounded-pill bg-secondary font">缓存</span>
                 <span class="badge rounded-pill bg-secondary font">缓冲</span>
                 <div class="float">
-                    <a class="margin">
+                    <span class="margin">
                         <span class="fa fa-comments-o"></span>
-                        <span>评论:</span>
-                    </a>
+                        评论:
+                    </span>
                     <a class="margin">
                         <span class="fa fa-thumbs-o-up"></span>
                         <span>赞:</span>
@@ -216,10 +228,11 @@
                 <span class="badge rounded-pill bg-secondary font">IE</span>
                 <span class="badge rounded-pill bg-secondary font">google</span>
                 <div class="float">
-                    <a class="margin">
-                        <span class="fa fa-comments-o"></span>
-                        <span>评论:</span>
-                    </a>
+                    <span class="margin">
+                        <span class="fa fa-comments-o">
+                            评论:
+                        </span>
+                    </span>
                     <a class="margin">
                         <span class="fa fa-thumbs-o-up"></span>
                         <span>赞:</span>
@@ -243,10 +256,10 @@
                 <span class="badge rounded-pill bg-secondary font">图灵测试</span>
                 <span class="badge rounded-pill bg-secondary font">发展历史</span>
                 <div class="float">
-                    <a class="margin">
+                    <span class="margin">
                         <span class="fa fa-comments-o"></span>
-                        <span>评论:</span>
-                    </a>
+                        评论:
+                    </span>
                     <a class="margin">
                         <span class="fa fa-thumbs-o-up"></span>
                         <span>赞:</span>
@@ -269,10 +282,10 @@
                 <span class="badge rounded-pill bg-secondary font">互联网</span>
                 <span class="badge rounded-pill bg-secondary font">历史</span>
                 <div class="float">
-                    <a class="margin">
+                    <span class="margin">
                         <span class="fa fa-comments-o"></span>
-                        <span>评论:</span>
-                    </a>
+                        评论:
+                    </span>
                     <a class="margin">
                         <span class="fa fa-thumbs-o-up"></span>
                         <span>赞:</span>
@@ -296,10 +309,10 @@
                 <span class="badge rounded-pill bg-secondary font">历史</span>
                 <span class="badge rounded-pill bg-secondary font">诉讼</span>
                 <div class="float">
-                    <a class="margin">
+                    <span class="margin">
                         <span class="fa fa-comments-o"></span>
-                        <span>评论:</span>
-                    </a>
+                        评论:
+                    </span>
                     <a class="margin">
                         <span class="fa fa-thumbs-o-up"></span>
                         <span>赞:</span>
@@ -324,10 +337,10 @@
                 <span class="badge rounded-pill bg-secondary font">历史</span>
                 <span class="badge rounded-pill bg-secondary font">影响</span>
                 <div class="float">
-                    <a class="margin">
+                    <span class="margin">
                         <span class="fa fa-comments-o"></span>
-                        <span>评论:</span>
-                    </a>
+                        评论:
+                    </span>
                     <a class="margin">
                         <span class="fa fa-thumbs-o-up"></span>
                         <span>赞:</span>
@@ -337,12 +350,12 @@
                         <span>踩:</span>
                     </a>
                 </div>
-                <hr  style="color:#fff;border:1px dashed #ddd;"/>
+                <hr style="color:#fff;border:1px dashed #ddd;" />
             </li>
-            
+
         </ul>
 
-    </article>
+    </main>
     <aside style="width:40%;float:right">
         <div class="tab">
             <span class="fa fa-tags fa-2x"></span>
@@ -472,20 +485,21 @@
     <footer style="clear:both">
         <div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
             <div class="btn-group mr-2" role="group" aria-label="First group">
-                <button type="button" class="btn btn-secondary">1</button>
-                <button type="button" class="btn btn-secondary">2</button>
-                <button type="button" class="btn btn-secondary">3</button>
-                <button type="button" class="btn btn-secondary">4</button>
-                <button type="button" class="btn btn-secondary">5</button>
-                <button type="button" class="btn btn-secondary">6</button>
-                <button type="button" class="btn btn-secondary">7</button>
-                <button type="button" class="btn btn-secondary">8</button>
-                <button type="button" class="btn btn-secondary">9</button>
-                <button type="button" class="btn btn-secondary">10</button>
-                <button type="button" class="btn btn-secondary">＞＞</button>
+                <a class="btn btn-secondary">1</a>
+                <a class="btn btn-secondary">2</a>
+                <a class="btn btn-secondary">3</a>
+                <a class="btn btn-secondary">4</a>
+                <a class="btn btn-secondary">5</a>
+                <a class="btn btn-secondary">6</a>
+                <a class="btn btn-secondary">7</a>
+                <a class="btn btn-secondary">8</a>
+                <a class="btn btn-secondary">9</a>
+                <a class="btn btn-secondary">10</a>
+                <a class="btn btn-secondary">＞＞</a>
             </div>
         </div>
-        <a class="fixed"><br />
+        <a class="fixed">
+            <br />
             <span class="fa fa-question-circle-o"></span><br />
             帮助
         </a>
