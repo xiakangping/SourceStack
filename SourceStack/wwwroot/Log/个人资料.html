@@ -25,20 +25,23 @@
         label {
            font-weight: bold
         }
+        ol li {
+            margin-bottom: 10px
+        }
     </style>
 </head>
      
 <body>
     <header>
-    <h2 class="font">
-        <span class="fa fa-user-circle-o"></span>
-        个人资料
-    </h2>
-    <hr />
+        <h2 class="font">
+            <span class="fa fa-user-circle-o"></span>
+            个人资料
+        </h2>
+        <hr />
     </header>
     <article style="float:left;width:45%">
         <label>头像：（* 仅限jpg/png/gif）</label><br />
-        <input type="text" class="form" placeholder="页面提交时上传文件" />
+        <input type="file" class="form" placeholder="页面提交时上传文件" />
         <button class="color">浏览</button><br />
         <label>性别：</label>
         <label><input type="radio" name="gender" value="male" />男</label>
@@ -86,7 +89,7 @@
         <input type="text" class="form" style="width:15%" placeholder="自定义关键字" /><br />
         <label>自我介绍:</label><br />
         <textarea cols="65" rows="10" name="selfDescription" style="border-radius: 4px;" placeholder="简单介绍一下自己，不超过255字"></textarea><br />
-        <button type="submit" class="color"style="background-color: #337ab7;color: #fff">提交</button>
+        <button type="submit" class="color" style="background-color: #337ab7;color: #fff">提交</button>
     </article>
     <aside>
         <h1 style="color: #31708f" class="font">
@@ -99,10 +102,6 @@
             <li>自我介绍的字数不要超过255字。</li>
         </ol>
     </aside>
-
-
-
-
-
+ 
 </body>
 </html>
