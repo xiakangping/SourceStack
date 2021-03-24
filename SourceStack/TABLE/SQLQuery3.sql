@@ -17,4 +17,14 @@ values (3,N'Admin-1','');
 
 insert [user](id,[username],[password])
 values (4,N'SuperAdmin',N'123456')
+USE [17bang5]
+SELECT * FROM [PROBLEM]
+UPDATE [PROBLEM] SET REWARD=0
 
+SELECT * FROM [USER]
+
+BEGIN TRAN
+DROP TABLE [USER]
+
+ROLLBACK
+COMMIT
