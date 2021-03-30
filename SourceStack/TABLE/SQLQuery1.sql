@@ -1,29 +1,20 @@
-﻿--在User表中插入以下四行数据：
---UserName
---Password
---17bang
---1234
---Admin
---NULL
---Admin-1
---SuperAdmin
---123456
-insert [user] (id,UserName,PassWord) 
-values(1,N'17bang',N'1234')
-insert [user] (id,UserName,PassWord)
-values(2,N'Admin',N'null')
-insert [user] (id,UserName,PassWord)
-values(3,N'Admin-1',N'')
-insert [user] (id,UserName,PassWord)
-values(4,N'SuperAdmin',N'123456')
---将Problem表中的Reward全部更新为0
-select * from [Problem];
-UPDATE [Problem] set peward=0
---使用事务，
---删除User表中的全部数据，
---回滚事务，撤销之前的删除行为
+﻿
+--在User表中：
 
-begin tran
-drop table [user]
-rollback
-commit
+--查找没有录入密码的用户
+--删除用户名（UserName）中包含“管理员”或者“17bang”字样的用户
+select * from [user] 
+where PassWord is null
+
+delete from [user]
+where [UserName] =N'管理员';
+
+--在Problem表中：
+
+--给所有悬赏（Reward）大于10的求助标题加前缀：【推荐】
+--给所有悬赏大于20且发布时间（Created）在2019年10月10日之后的求助标题加前缀：【加急】
+--删除所有标题以中括号【】开头（无论其中有什么内容）的求助
+--查找Title中第5个起，字符不为“数据库”且包含了百分号（%）的求助
+UPDATE [Problem]
+SET Reward 
+WHERE > 10
