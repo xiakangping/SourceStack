@@ -1,17 +1,17 @@
-﻿--观察“一起帮”的注册和发布求助功能，试着建立表User：包含UserName（用户名），Password（密码）……
-create table [user](
+﻿--观察“一起帮”的发布求助功能，试着建立表Problem，包含：
+
+--Id
+--Title（标题）
+--Content（正文）
+--NeedRemoteHelp（需要远程求助）
+--Reward（悬赏）
+--PublishDateTime（发布时间）……
+--请为这些列选择合适的数据类型。
+create table Problem(
 id int,
-UserName nvarchar(20),
-PassWord nvarchar(20)
+title nvarchar(20),
+content text,
+NeedRemoteTime bit,
+Peward int,
+PublishDateTime datetime
 )
---为User表添加一列：邀请人（InvitedBy），类型为INT
-alter table [user]
-ADD InvitedBy int
-
---将InvitedBy类型修改为NVARCHAR(10)
-alter table [user]
-alter column InvitedBy nvarchar(10)
-
---删除列InvitedBy
-alter table [user]
-drop  column InvitedBy 
