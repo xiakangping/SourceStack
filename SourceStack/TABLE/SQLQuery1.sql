@@ -1,17 +1,29 @@
-﻿--观察“一起帮”的发布求助功能，试着建立表Problem，包含：
+﻿--在User表中插入以下四行数据：
+--UserName
+--Password
+--17bang
+--1234
+--Admin
+--NULL
+--Admin-1
+--SuperAdmin
+--123456
+insert [user] (id,UserName,PassWord) 
+values(1,N'17bang',N'1234')
+insert [user] (id,UserName,PassWord)
+values(2,N'Admin',N'null')
+insert [user] (id,UserName,PassWord)
+values(3,N'Admin-1',N'')
+insert [user] (id,UserName,PassWord)
+values(4,N'SuperAdmin',N'123456')
+--将Problem表中的Reward全部更新为0
+select * from [Problem];
+UPDATE [Problem] set peward=0
+--使用事务，
+--删除User表中的全部数据，
+--回滚事务，撤销之前的删除行为
 
---Id
---Title（标题）
---Content（正文）
---NeedRemoteHelp（需要远程求助）
---Reward（悬赏）
---PublishDateTime（发布时间）……
---请为这些列选择合适的数据类型。
-create table Problem(
-id int,
-title nvarchar(20),
-content text,
-NeedRemoteTime bit,
-Peward int,
-PublishDateTime datetime
-)
+begin tran
+drop table [user]
+rollback
+commit
