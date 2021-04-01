@@ -1,41 +1,27 @@
-﻿--在User表上的基础上：
+﻿--1.观察一起帮的“关键字”功能，新建Keyword表，要求带一个自增的主键Id，起始值为10，步长为5；并存入若干条数据
+alter table [keyword]
+add id int identity(10,5);
+INSERT INTO [keyword]([Name]) VALUES (N'陈国栋'); 
+--2.将User表中Id列修改为可存储GUID的类型，并存入若干条包含GUID值的数据
+alter table [user]
+drop CONSTRAINT pk_id;
+alter table [user]
+drop column id;
+alter table [user]
+add id varchar(40);
+update [user]set id= (newid())
 
---添加Id列，让Id成为主键
-alter table [user]
-ADD id int ;
-update [user] set id=1
-where username=N'18bang';
-alter table [user]
-alter column id int not null;
-ALTER TABLE [user] 
-ADD CONSTRAINT PK_Id PRIMARY KEY(Id);
---添加约束，让UserName不能重复
-ALTER TABLE [user]
-ALTER COLUMN [UserName] nvarchar(20) not null;
-alter table [user]
-ADD CONSTRAINT UQ_ENROLL UNIQUE(UserName); 
---在Problem表的基础上：
 
---为NeedRemoteHelp添加NOT NULL约束，再删除NeedRemoteHelp上NOT NULL的约束
-ALTER TABLE [Problem]
-DROP CONSTRAINT CK_NeedRemoteHelp;
-update [Problem] set NeedRemoteHelp=1;
+select newid()
+
+
+
+--3.Problem表已有Id列，如何给该列加上IDENTITY属性？
 alter table [Problem]
-drop  column [NeedRemoteHelp];
+drop column id;
 alter table [Problem]
-ADD  [NeedRemoteHelp] BIT  NULL;
-ALTER TABLE [Problem] 
-ALTER COLUMN NeedRemoteHelp bit not null;
-ALTER TABLE [Problem] 
-ALTER COLUMN NeedRemoteHelp bit not;
+add id int identity(1,1);
 
---添加自定义约束，让Reward不能小于10
-update [Problem] set Peward=20;
-ALTER TABLE [Problem]
-ADD CONSTRAINT CK_Peward CHECK(Peward>=10);
-
-
-select * from [USER];
 select * from [Problem];
-
-
+select * from [keyword];
+select * from [user];
