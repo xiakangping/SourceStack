@@ -1,37 +1,17 @@
-﻿--1.在Problem中插入不同作者（Author）不同悬赏（Reward）的若干条数据，以便能完成以下操作：
-alter table [Problem]
-add [Author] nvarchar(20); 
-update [Problem] set Author=N'飞哥'; 
-insert [Problem] (Peward,Author)
-values  (15,N'夏康平');
+﻿--用户资料，新建用户资料（Profile）表，和User形成1:1关联（有无约束？）。用SQL语句演示：
+--1.新建一个填写了用户资料的注册用户
+--2.通过Id查找获得某注册用户及其用户资料
+--3.删除某个Id的注册用户
 
---   1.查找出Author为“飞哥”的、Reward最多的3条求助
-select top 3 Peward from [Problem] where Author=N'飞哥'
-ORDER BY Peward DESC 
+--1.帮帮点说明：新建Credit表，可以记录用户的每一次积分获得过程，即：某个用户，在某个时间，因为某某原因，获得若干积分
+--发布求助，在Problem和User之间建立1:n关联（含约束）。用SQL语句演示：
+--1.某用户发布一篇求助，
+--2.将该求助的作者改成另外一个用户
+--3.删除该用户
 
---   2.所有求助，先按作者“分组”，然后在“分组”中按悬赏从大到小排序
-select author,peward from [Problem] order by
-author,peward desc
---   3.查找并统计出每个作者的：求助数量、悬赏总金额和平均值
-select author,count(*),sum(peward),avg(peward) from [problem]
-group by author
-
---   4.找出平均悬赏值少于10的作者并按平均值从小到大排序
-select author,avg(peward) from [problem] group by author
-having avg(peward)<10
-order by avg(peward)asc;
---2.以Problem中的数据为基础，使用SELECT INTO，
---新建一个Author和Reward都没有NULL值的新表：NewProblem 
---（把原Problem里Author或Reward为NULL值的数据删掉）
-select author,peward into [NewProblem] from [Problem];
-
---3.使用INSERT SELECT, 将Problem中Reward为NULL的行再次插入到NewProblem中
-update [NewProblem] set peward= null where author=N'大飞哥';
-insert [NewProblem](author,peward)
-select author,peward from [Problem] where peward is null；
-
-
-
-
-select * from [Problem];
-select * from [NewProblem];
+--求助列表：新建Keyword表，和Problem形成n:n关联（含约束）。用SQL语句演示：
+--1.查询获得：某求助使用了多少关键字，某关键字被多少求助使用
+--2.发布了一个使用了若干个关键字的求助
+--3.该求助不再使用某个关键字
+--4.删除该求助
+--5.删除某关键字
