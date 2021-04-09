@@ -1,25 +1,30 @@
-﻿--查找没有录入密码的用户
-select [password] from [User] where password=N''
---删除用户名（UserName）中包含“管理员”或者“17bang”字样的用户
-delete [User] where [UserName]like (N'%17bang%')
---在Problem表中：
---给所有悬赏（Reward）大于10的求助标题加前缀：【推荐】
-update [Reward] set Title=N'推荐'+Title
-where [Reward]>10;
---给所有悬赏大于20且发布时间（Created）在2019年10月10日之后的求助标题加前缀：【加急】
-update [Reward] set Title=N'加急'+Title
-where [Reward]>20 and PublishDateTime >'2019/10/10';
---删除所有标题以中括号【】开头（无论其中有什么内容）的求助
-delete [Problem] where Title like N'【%】';
---查找Title中第5个起，字符不为“数据库”且包含了百分号（%）的求助
-select * from [Problem] where Title not like N'_____%数据库'
-and Title like N'%#%%' ESCAPE '#'
---在Keyword表中：
---找出所有被使用次数（Used）大于10小于50的关键字名称（Name）
-select [name] from keyword where used >10 and used <50; 
---如果被使用次数（Used）小于等于0，或者是NULL值，或者大于100的，将其更新为1
-update keyword set used=1
-where used<0 or used is null or used>100;
---删除所有使用次数为奇数的Keyword
-delete keyword where used%2=1;
-select * from [Problem]
+﻿--在Problem中插入不同作者（Author）不同悬赏（Reward）的若干条数据，以便能完成以下操作：
+--查找出Author为“飞哥”的、Reward最多的3条求助
+select top 3 * from problem
+where author=N'飞哥'
+order by reward desc;
+--所有求助，先按作者“分组”，然后在“分组”中按悬赏从大到小排序
+select author,reward from problem
+order by author,Reward desc;
+--查找并统计出每个作者的：求助数量、悬赏总金额和平均值
+select author,count(title),sum(reward),avg(reward)
+from problem group by author;
+--找出平均悬赏值少于10的作者并按平均值从小到大排序
+alter table problem
+drop constraint  ck_reward;
+select author,avg(reward) from problem
+group by author
+having avg(reward)<10
+order by avg(reward)asc;
+--以Problem中的数据为基础，使用SELECT INTO，新建一个Author和Reward都没有NULL值的新表：NewProblem
+--（把原Problem里Author或Reward为NULL值的数据删掉）
+select* into newproblem from Problem
+where author is not null and reward is not null;
+--drop table newproblem
+--使用INSERT SELECT, 将Problem中Reward为NULL的行再次插入到NewProblem中
+insert newproblem(title,Content,NeedRemoteHelp,Reward,PublishDateTime,author)
+select title,Content,NeedRemoteHelp,Reward,PublishDateTime,author 
+from problem where reward is null;
+select * from problem;
+select * from newproblem;
+drop table newproblem
