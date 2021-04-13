@@ -1,30 +1,17 @@
-﻿--在Problem中插入不同作者（Author）不同悬赏（Reward）的若干条数据，以便能完成以下操作：
---查找出Author为“飞哥”的、Reward最多的3条求助
-select top 3 * from problem
-where author=N'飞哥'
-order by reward desc;
---所有求助，先按作者“分组”，然后在“分组”中按悬赏从大到小排序
-select author,reward from problem
-order by author,Reward desc;
---查找并统计出每个作者的：求助数量、悬赏总金额和平均值
-select author,count(title),sum(reward),avg(reward)
-from problem group by author;
---找出平均悬赏值少于10的作者并按平均值从小到大排序
-alter table problem
-drop constraint  ck_reward;
-select author,avg(reward) from problem
-group by author
-having avg(reward)<10
-order by avg(reward)asc;
---以Problem中的数据为基础，使用SELECT INTO，新建一个Author和Reward都没有NULL值的新表：NewProblem
---（把原Problem里Author或Reward为NULL值的数据删掉）
-select* into newproblem from Problem
-where author is not null and reward is not null;
---drop table newproblem
---使用INSERT SELECT, 将Problem中Reward为NULL的行再次插入到NewProblem中
-insert newproblem(title,Content,NeedRemoteHelp,Reward,PublishDateTime,author)
-select title,Content,NeedRemoteHelp,Reward,PublishDateTime,author 
-from problem where reward is null;
-select * from problem;
-select * from newproblem;
-drop table newproblem
+﻿--观察并模拟17bang项目中的：
+--用户资料，新建用户资料（Profile）表，和User形成1:1关联（有无约束？）。用SQL语句演示：
+--新建一个填写了用户资料的注册用户
+--通过Id查找获得某注册用户及其用户资料
+--删除某个Id的注册用户
+--帮帮点说明：新建Credit表，可以记录用户的每一次积分获得过程，即：某个用户，在某个时间，因为某某原因，获得若干积分
+--发布求助，在Problem和User之间建立1:n关联（含约束）。用SQL语句演示：
+--某用户发布一篇求助，
+--将该求助的作者改成另外一个用户
+--删除该用户
+--求助列表：新建Keyword表，和Problem形成n:n关联（含约束）。用SQL语句演示：
+--查询获得：某求助使用了多少关键字，某关键字被多少求助使用
+--发布了一个使用了若干个关键字的求助
+--该求助不再使用某个关键字
+--删除该求助
+--删除某关键字
+
