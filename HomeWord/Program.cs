@@ -12,12 +12,12 @@ namespace HomeWord
             //并输出共有多少名同学。
             string[,] name = new string[4, 3];
             name[0, 0] = "周丁号";
-            name[0, 1] = "夏康平";
+            name[0, 1] = "夏康平";           // 二维数组
             name[0, 2] = "陈国栋";
             name[1, 0] = "胡涛";
             name[1, 1] = "姜鹏";
             name[2, 0] = "韩佳宝";
-            name[2, 1] = "刘";
+            name[2, 1] = "刘建林";
             name[2, 2] = "秦慧";
             name[3, 0] = "陈元";
             Console.WriteLine(name[0,1]);
