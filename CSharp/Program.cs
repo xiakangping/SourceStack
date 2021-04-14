@@ -6,10 +6,16 @@ namespace CSharp
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(3 + 6);
-            Console.WriteLine(3 * 8);
-           
-            Console.Read();
+            int input = Convert.ToInt32(Console.ReadLine());
+            if (input>=0)
+            {
+                Console.WriteLine("正确");
+            }
+            else
+            {
+                Console.WriteLine("错误");
+            }
         }
     }
 }
+
