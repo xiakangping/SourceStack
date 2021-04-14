@@ -10,8 +10,11 @@ namespace HomeWord
             //按进栈时间装入一维数组，
             //按座位装入二维数组，
             //并输出共有多少名同学。
+            string[] time = { "2021/3/2", "2021/4/7", "2021/4/11" };
+            Console.WriteLine(time[0]);      //一维数组
+
             string[,] name = new string[4, 3];
-            name[0, 0] = "周丁号";
+            name[0, 0] = "周丁浩";
             name[0, 1] = "夏康平";           // 二维数组
             name[0, 2] = "陈国栋";
             name[1, 0] = "胡涛";
@@ -21,6 +24,7 @@ namespace HomeWord
             name[2, 2] = "秦慧";
             name[3, 0] = "陈元";
             Console.WriteLine(name[0,1]);
+            Console.WriteLine(name.Length);
             //用户依次由控制台输入：验证码、用户名和密码：
             //如果验证码输入错误，直接输出：“*验证码错误”；
             //如果用户名不存在，直接输出：“*用户名不存在”；
