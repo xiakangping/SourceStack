@@ -4,13 +4,6 @@ namespace HomeWord
 {
     class Program
     {
-        //1.分别用for循环和while循环输出：1,2,3,4,5 和 1,3,5,7,9
-
-        //2.用for循环输出存储在一维/二维数组里的源栈所有同学姓名/昵称
-        //3.让电脑计算并输出：99+97+95+93+...+1的值
-        //4.将源栈同学的成绩存入一个double数组中，用循环找到最高分和最低分
-        //5.找到100以内的所有质数（只能被1和它自己整除的数）
-        //6.生成一个元素（值随机）从小到大排列的数组
         static void Main(string[] args)
         {
             //1.分别用for循环和while循环输出：1,2,3,4,5 和 1,3,5,7,9
@@ -62,8 +55,45 @@ namespace HomeWord
             //}/*else contime*/                     //取最小值
             //Console.WriteLine(min);
             //5.找到100以内的所有质数（只能被1和它自己整除的数）
+
+            //for (int i = 2; i < 100; i++)
+            //{
+            //    int sum = 0;
+            //    for (int j = 1; j <= i; j++)
+            //    {
+            //        if (i % j == 0)
+            //        {
+            //            sum++;
+            //        }//else
+            //    }
+            //    if (sum == 2)
+            //    {
+            //        Console.WriteLine(i);
+            //    }//else
+            //}
+
             //6.生成一个元素（值随机）从小到大排列的数组
+            //int[] number = new int[10];
+            //for (int i = 0; i < number.Length; i++)
+            //{
+            //    Console.WriteLine(i + 1);
+            //}
+
             //7.设立并显示一个多维数组的值，元素值等于下标之和。Console.Write()
+            int[,] mda = new int[3, 4];
+            for (int i = 0; i < mda.GetLength(0); i++)
+            {
+                for (int j = 0; j < mda.GetLength(1); j++)
+                {
+                    Console.WriteLine(i+j);
+                    Console.WriteLine("\r\t");
+                   
+                }
+            }
+                         
+
+
+
 
             //    //将源栈同学姓名 / 昵称分别：
             //    //按进栈时间装入一维数组，
@@ -72,18 +102,18 @@ namespace HomeWord
             //string[] time = { "2021/3/2", "2021/4/7", "2021/4/11" };
             //Console.WriteLine(time[0]);      //一维数组
 
-            //string[,] name = new string[4, 3];
-            //name[0, 0] = "周丁浩";
-            //name[0, 1] = "夏康平";           // 二维数组
-            //name[0, 2] = "陈国栋";
-            //name[1, 0] = "胡涛";
-            //name[1, 1] = "姜鹏";
-            //name[2, 0] = "韩佳宝";
-            //name[2, 1] = "刘胜林";
-            //name[2, 2] = "秦慧";
-            //name[3, 0] = "陈元";
-            //Console.WriteLine(name[0, 1]);
-            //Console.WriteLine(name.Length);
+            //string[,] names = new string[4, 3];
+            //names[0, 0] = "周丁浩";
+            //names[0, 1] = "夏康平";           // 二维数组
+            //names[0, 2] = "陈国栋";
+            //names[1, 0] = "胡涛";
+            //names[1, 1] = "姜鹏";
+            //names[2, 0] = "韩佳宝";
+            //names[2, 1] = "刘胜林";
+            //names[2, 2] = "秦慧";
+            //names[3, 0] = "陈元";
+            //Console.WriteLine(names[0, 1]);
+            //Console.WriteLine(names.Length);
             //用户依次由控制台输入：验证码、用户名和密码：
             //如果验证码输入错误，直接输出：“*验证码错误”；
             //如果用户名不存在，直接输出：“*用户名不存在”；

@@ -6,25 +6,27 @@ namespace CSharp
     {
         static void Main(string[] args)
         {
-            int[] studentsid = { 1, 2, 3, 4, 5, 7, 8, 9, 10, 15 };
-            
-            for (int i = 0; i < studentsid.Length; i++)
+            int[] studentids = { 8, 5, 50, 46, 32, 88, 105, 20, 58, 79, 11 };
+            for (int i = 0; i < studentids.Length; i++)
             {
-                if (studentsid[i] == 5)
+                for (int j = 0; j < studentids.Length-1; j++)
                 {
-                    Console.WriteLine($"找到了，在数组中第{(i + 1)}位");
-                    break;
-                }
-                else
-                {
-                    if (i==studentsid.Length-1)
+                    if (studentids[j] < studentids[j+1])
                     {
-                        Console.WriteLine("没找到");
-                    }
-                   
-                }/*else*/
+                        int box = studentids[j];
+                        studentids[j] = studentids[j + 1];
+                        studentids[j + 1] = box;
+                    }//else.
+                }
             }
+            for (int i = 0; i< studentids.Length; i++)
+            {
+                Console.WriteLine(studentids[i]);
+            }
+           
+            
+
+
         }
     }
 }
-
