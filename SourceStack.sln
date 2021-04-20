@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SourceStack", "SourceStack\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp", "CSharp\CSharp.csproj", "{83504C64-CB99-49A5-93ED-A907496080EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HomeWord", "HomeWord\HomeWord.csproj", "{54595DC7-960C-4604-A573-D0AF0ED26D4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework", "HomeWord\Homework.csproj", "{54595DC7-960C-4604-A573-D0AF0ED26D4C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

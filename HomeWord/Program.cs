@@ -26,9 +26,9 @@ namespace HomeWord
             //    Console.WriteLine(names[i]);
 
             //}
-            //3.让电脑计算并输出：99+97+95+93+...+1的值
+            //3.让电脑计算并输出：99 + 97 + 95 + 93 + ...+1的值
             //int sum = 0;
-            //for (int i = 99; i < 101; i -= 2)
+            //for (int i = 99; i >0; i -= 2)
             //{
             //    sum += i;
             //}
@@ -56,44 +56,66 @@ namespace HomeWord
             //Console.WriteLine(min);
             //5.找到100以内的所有质数（只能被1和它自己整除的数）
 
-            //for (int i = 2; i < 100; i++)
+            //for (int i = 2; i < 101; i++)
             //{
-            //    int sum = 0;
-            //    for (int j = 1; j <= i; j++)
+            //    for (int j = 2; j < i; j++)
             //    {
             //        if (i % j == 0)
             //        {
-            //            sum++;
-            //        }//else
+
+            //            break;
+            //        }
+            //        else
+            //        {
+            //            if (j == i - 1)
+            //            {
+            //                Console.WriteLine(i);
+            //            }//else
+            //        }
             //    }
-            //    if (sum == 2)
+            //}
+            //6.生成一个元素（值随机）从小到大排列的数组
+            //int[] nums = new int[10];
+            //Random random = new Random();
+            ////随机数值
+            //for (int i = 0; i < 10; i++)
+            //{
+            //    nums[i] = random.Next(0, 100);
+            //}
+            ////冒泡排序 从小到大
+            //for (int i = 0; i < nums.Length; i++)
+            //{
+            //    for (int j = i + 1; j < nums.Length-1; j++)
             //    {
-            //        Console.WriteLine(i);
-            //    }//else
+            //        if (nums[j] < nums[i])
+
+            //        {
+            //            int temp = nums[i];
+            //            nums[i] = nums[j];
+            //            nums[j] = temp;
+            //        }
+            //    }
+            //}
+            //foreach (int num in nums)
+            //{
+            //    Console.WriteLine(num);
             //}
 
-            //6.生成一个元素（值随机）从小到大排列的数组
-            //int[] number = new int[10];
-            //for (int i = 0; i < number.Length; i++)
-            //{
-            //    Console.WriteLine(i + 1);
-            //}
+
+
+
 
             //7.设立并显示一个多维数组的值，元素值等于下标之和。Console.Write()
-            int[,] mda = new int[3, 4];
-            for (int i = 0; i < mda.GetLength(0); i++)
-            {
-                for (int j = 0; j < mda.GetLength(1); j++)
-                {
-                    Console.WriteLine(i+j);
-                    Console.WriteLine("\r\t");
-                   
-                }
-            }
-                         
+            //int[,] mda = new int[3, 4];
+            //for (int i = 0; i < mda.GetLength(0); i++)
+            //{
+            //    for (int j = 0; j < mda.GetLength(1); j++)
+            //    {
+            //        Console.Write(i + j+" ");
+            //        Console.WriteLine(Environment.NewLine);
 
-
-
+            //    }
+            //}
 
             //    //将源栈同学姓名 / 昵称分别：
             //    //按进栈时间装入一维数组，

@@ -6,27 +6,38 @@ namespace CSharp
     {
         static void Main(string[] args)
         {
-            int[] studentids = { 8, 5, 50, 46, 32, 88, 105, 20, 58, 79, 11 };
-            for (int i = 0; i < studentids.Length; i++)
+            int[] nums = new int[10];
+            Random random = new Random();
+            //随机数值
+            for (int i = 0; i < 10; i++)
             {
-                for (int j = 0; j < studentids.Length-1; j++)
-                {
-                    if (studentids[j] < studentids[j+1])
-                    {
-                        int box = studentids[j];
-                        studentids[j] = studentids[j + 1];
-                        studentids[j + 1] = box;
-                    }//else.
-                }
+                nums[i] = random.Next(0, 100);
             }
-            for (int i = 0; i< studentids.Length; i++)
+            //冒泡排序 从小到大
+            for (int i = 0; i < 9; i++)
             {
-                Console.WriteLine(studentids[i]);
+                for (int j = i + 1; j < 10; j++)
+                {
+                    if (nums[j] < nums[i])
+
+                    {
+                        int temp = nums[i];
+                        nums[i] = nums[j];
+                        nums[j] = temp;
+                    }
+                }
+            }            
+            foreach (int num in nums)
+            {
+                Console.WriteLine(num);
             }
            
-            
-
 
         }
+
     }
+
+
+
 }
+
