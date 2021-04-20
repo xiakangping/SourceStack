@@ -111,10 +111,9 @@ namespace HomeWord
             //{
             //    for (int j = 0; j < mda.GetLength(1); j++)
             //    {
-            //        Console.Write(i + j+" ");
-            //        Console.WriteLine(Environment.NewLine);
-
+            //        Console.Write(i + j + " ");               
             //    }
+            //    Console.WriteLine();
             //}
 
             //    //将源栈同学姓名 / 昵称分别：
