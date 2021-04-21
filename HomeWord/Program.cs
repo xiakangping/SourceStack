@@ -6,6 +6,8 @@ namespace HomeWord
     {
         static void Main(string[] args)
         {
+            
+
             //1.分别用for循环和while循环输出：1,2,3,4,5 和 1,3,5,7,9
             //string[] names = { "1", "2", "3", "4", "5" };
             //for (int i = 0; i < names.Length; i++)
@@ -111,7 +113,7 @@ namespace HomeWord
             //{
             //    for (int j = 0; j < mda.GetLength(1); j++)
             //    {
-            //        Console.Write(i + j + " ");               
+            //        Console.Write(i + j +" ");
             //    }
             //    Console.WriteLine();
             //}
@@ -175,5 +177,7 @@ namespace HomeWord
             //}
 
         }
+        
+       
     }
-}
+} 

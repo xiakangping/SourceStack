@@ -6,38 +6,29 @@ namespace CSharp
     {
         static void Main(string[] args)
         {
-            int[] nums = new int[10];
-            Random random = new Random();
-            //随机数值
-            for (int i = 0; i < 10; i++)
+            bool b = true;
+            int number = 0;
+            Console.WriteLine("请输入内容");
+            try
             {
-                nums[i] = random.Next(0, 100);
+                number = Convert.ToInt32(Console.ReadLine());
             }
-            //冒泡排序 从小到大
-            for (int i = 0; i < 9; i++)
+            catch 
             {
-                for (int j = i + 1; j < 10; j++)
-                {
-                    if (nums[j] < nums[i])
-
-                    {
-                        int temp = nums[i];
-                        nums[i] = nums[j];
-                        nums[j] = temp;
-                    }
-                }
-            }            
-            foreach (int num in nums)
-            {
-                Console.WriteLine(num);
+                Console.WriteLine("您的输入有误");
+                b = false;
             }
-           
+            if (b)
+            {
+                Console.WriteLine(number*2);
+            }//else
 
         }
-
     }
-
-
-
 }
+    
+
+
+
+
 
