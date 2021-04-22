@@ -2,31 +2,24 @@
 
 namespace CSharp
 {
+
     class Program
     {
         static void Main(string[] args)
         {
-            bool b = true;
-            int number = 0;
-            Console.WriteLine("请输入内容");
-            try
-            {
-                number = Convert.ToInt32(Console.ReadLine());
-            }
-            catch 
-            {
-                Console.WriteLine("您的输入有误");
-                b = false;
-            }
-            if (b)
-            {
-                Console.WriteLine(number*2);
-            }//else
-
+            int n1 = 10;
+            int n2 = 20;
+            int m=GetMax(n1, n2);
+            Console.WriteLine(m);
+            
+        }  
+        static int GetMax(int n1,int n2)
+        {
+            int max=n1 > n2 ? n1 : n2;
+            return max;
         }
-    }
+    }     
 }
-    
 
 
 

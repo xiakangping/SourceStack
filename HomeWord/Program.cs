@@ -6,7 +6,20 @@ namespace HomeWord
     {
         static void Main(string[] args)
         {
-            
+            //1.将之前作业封装成方法（自行思考参数和返回值），并调用执行。
+
+            //且以后作业，如无特别声明，皆需使用方法封装。
+            //2.计算得到源栈同学的平均成绩（精确到两位小数），方法名GetAverage()
+            //double[] sums= { 75, 80.5, 67.5,99.5, 75.4, 65.8};
+            //Console.WriteLine(Math. Round(GetAverage(sums),2));
+
+            //3.完成“猜数字”游戏，方法名GuessMe()：
+            //随机生成一个大于0小于1000的整数
+            //用户输入一个猜测值，系统进行判断，告知用户猜测的数是“大了”，还是“小了”
+            //没猜中可以继续猜，但最多不能超过10次
+            //如果5次之内猜中，输出：你真牛逼！
+            //如果8次之内猜中，输出：不错嘛！
+            //10次还没猜中，输出：(～￣(OO)￣)ブ
 
             //1.分别用for循环和while循环输出：1,2,3,4,5 和 1,3,5,7,9
             //string[] names = { "1", "2", "3", "4", "5" };
@@ -176,8 +189,22 @@ namespace HomeWord
             //    }
             //}
 
+
         }
-        
-       
+        /// <summary>
+        /// 求一组数组的平均值
+        /// </summary>
+        /// <param name="sums">数组里所有的数据</param>
+        /// <returns>结果返回值</returns>
+        //static double GetAverage(double[] sums)
+        //{
+        //    double avg = 0;
+        //    for (int i = 0; i < sums.Length; i++)
+        //    {
+        //        avg = sums[i] + avg;
+        //    }
+        //    return avg / sums.Length;
+        //}
+
     }
-} 
+}
