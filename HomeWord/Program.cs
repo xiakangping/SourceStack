@@ -4,14 +4,18 @@ namespace HomeWord
 {
     class Program
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             //1.将之前作业封装成方法（自行思考参数和返回值），并调用执行。
 
             //且以后作业，如无特别声明，皆需使用方法封装。
             //2.计算得到源栈同学的平均成绩（精确到两位小数），方法名GetAverage()
-            //double[] sums= { 75, 80.5, 67.5,99.5, 75.4, 65.8};
-            //Console.WriteLine(Math. Round(GetAverage(sums),2));
+            //double[] sums = { 75, 80.5, 67.5, 99.5, 75.4, 65.8 };
+            //Console.WriteLine(Math.Round(GetAverage(sums), 2));
 
             //3.完成“猜数字”游戏，方法名GuessMe()：
             //随机生成一个大于0小于1000的整数
@@ -20,6 +24,13 @@ namespace HomeWord
             //如果5次之内猜中，输出：你真牛逼！
             //如果8次之内猜中，输出：不错嘛！
             //10次还没猜中，输出：(～￣(OO)￣)ブ
+            //GuessMe();
+            //1.利用ref调用Swap()方法交换两个同学的床位号
+            //2.将登陆的过程封装成一个方法LogOn()，调用之后能够获得：
+            //  true / false，表示登陆是否成功
+            //  string，表示登陆失败的原因
+
+
 
             //1.分别用for循环和while循环输出：1,2,3,4,5 和 1,3,5,7,9
             //string[] names = { "1", "2", "3", "4", "5" };
@@ -204,7 +215,55 @@ namespace HomeWord
         //        avg = sums[i] + avg;
         //    }
         //    return avg / sums.Length;
-        //}
+        //}      
 
+        ///猜数字游戏
+        ///
+        //static void GuessMe()
+        //{
+        //    int nums = new Random().Next(1, 1000);
+        //    Console.WriteLine("随机数是:" + nums);
+        //    Console.WriteLine("请输入数字");
+        //    for (int i = 0; i < 11; i++)
+        //    {
+        //        int input = Convert.ToInt32(Console.ReadLine());
+
+        //        if (input > nums)
+        //        {
+
+        //            Console.WriteLine($"太大了，还剩{10 - i}次");
+        //        }
+        //        else if (input < nums)
+        //        {
+        //            Console.WriteLine($"太小了，还剩{10 - i}次");
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine("恭喜你，猜中了");
+        //            if (i <= 5)
+        //            {
+        //                Console.WriteLine("你真牛逼！");
+        //            }
+        //            else if (i <= 8)
+        //            {
+        //                Console.WriteLine("不错嘛！");
+        //            }
+        //            else if (i <= 10)
+        //            {
+        //                Console.WriteLine("太菜了！！！");
+        //            }
+        //            else if (input != nums && i >= 10)
+        //            {
+        //                Console.WriteLine("(～￣(OO)￣)ブ");
+        //            }//else
+        //            break;
+
+        //        }
+
+
+
+        //    }
+        //    return;
+        //}
     }
 }
