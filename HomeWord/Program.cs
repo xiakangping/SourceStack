@@ -29,119 +29,23 @@ namespace HomeWord
             //2.将登陆的过程封装成一个方法LogOn()，调用之后能够获得：
             //  true / false，表示登陆是否成功
             //  string，表示登陆失败的原因
-
-
-
             //1.分别用for循环和while循环输出：1,2,3,4,5 和 1,3,5,7,9
             //string[] names = { "1", "2", "3", "4", "5" };
-            //for (int i = 0; i < names.Length; i++)
-            //{
-            //    Console.WriteLine(names[i]);    //for循环
-            //}
-
-            //int i = -1;
-            //while (i < 9)
-            //{
-            //    i += 2;
-            //    Console.WriteLine(i);            //while循环
-            //}
+            //Font(names);
+            //Whiles(names);
             //2.用for循环输出存储在一维/二维数组里的源栈所有同学姓名/昵称
             //string[] names = { "周丁浩", "夏康平", "陈国栋", "胡涛", "姜鹏", "韩佳宝", "刘胜林", "秦慧", "陈元" };
-            //for (int i = 0; i < names.Length; i++)
-            //{
-            //    Console.WriteLine(names[i]);
-
-            //}
+            //Font2(names);
             //3.让电脑计算并输出：99 + 97 + 95 + 93 + ...+1的值
-            //int sum = 0;
-            //for (int i = 99; i >0; i -= 2)
-            //{
-            //    sum += i;
-            //}
-            //Console.WriteLine(sum);
+            //Int(47);
             //4.将源栈同学的成绩存入一个double数组中，用循环找到最高分和最低分
-            //int[] doubles= { 95, 100, 78, 77, 86, 65, 70 ,55};
-            ////int max = doubles[0];
-            ////for (int i = 1; i < doubles.Length; i++)
-            ////{
-            ////    if (doubles[i]>max)
-            ////    {
-            ////        max = doubles[i];
-            ////    }
-            ////}
-            //////else contime
-            ////Console.WriteLine(max);             //取最大值
-            //int min = doubles[0];
-            //for (int i = 0; i < doubles.Length; i++)
-            //{
-            //    if (doubles[i]<min)
-            //    {
-            //        min = doubles[i];
-            //    }
-            //}/*else contime*/                     //取最小值
-            //Console.WriteLine(min);
+            //MaxMin(12.5);
             //5.找到100以内的所有质数（只能被1和它自己整除的数）
-
-            //for (int i = 2; i < 101; i++)
-            //{
-            //    for (int j = 2; j < i; j++)
-            //    {
-            //        if (i % j == 0)
-            //        {
-
-            //            break;
-            //        }
-            //        else
-            //        {
-            //            if (j == i - 1)
-            //            {
-            //                Console.WriteLine(i);
-            //            }//else
-            //        }
-            //    }
-            //}
+            //Mach(2);
             //6.生成一个元素（值随机）从小到大排列的数组
-            //int[] nums = new int[10];
-            //Random random = new Random();
-            ////随机数值
-            //for (int i = 0; i < 10; i++)
-            //{
-            //    nums[i] = random.Next(0, 100);
-            //}
-            ////冒泡排序 从小到大
-            //for (int i = 0; i < nums.Length; i++)
-            //{
-            //    for (int j = i + 1; j < nums.Length-1; j++)
-            //    {
-            //        if (nums[j] < nums[i])
-
-            //        {
-            //            int temp = nums[i];
-            //            nums[i] = nums[j];
-            //            nums[j] = temp;
-            //        }
-            //    }
-            //}
-            //foreach (int num in nums)
-            //{
-            //    Console.WriteLine(num);
-            //}
-
-
-
-
-
-            //7.设立并显示一个多维数组的值，元素值等于下标之和。Console.Write()
-            //int[,] mda = new int[3, 4];
-            //for (int i = 0; i < mda.GetLength(0); i++)
-            //{
-            //    for (int j = 0; j < mda.GetLength(1); j++)
-            //    {
-            //        Console.Write(i + j +" ");
-            //    }
-            //    Console.WriteLine();
-            //}
-
+            //Bubbing();
+            //7.设立并显示一个多维数组的值，元素值等于下标之和。Console.Write()           
+            //Orcode(2);
             //    //将源栈同学姓名 / 昵称分别：
             //    //按进栈时间装入一维数组，
             //    //按座位装入二维数组，
@@ -202,6 +106,7 @@ namespace HomeWord
 
 
         }
+
         /// <summary>
         /// 求一组数组的平均值
         /// </summary>
@@ -265,5 +170,155 @@ namespace HomeWord
         //    }
         //    return;
         //}
+        /// <summary>
+        /// 设立显示一个二维数组
+        /// </summary>
+        /// <param name="moos"></param>
+        //static void Orcode(int moos)
+        //{
+        //    int[,] mda = new int[3, 4];
+        //    for (int i = 0; i < mda.GetLength(0); i++)
+        //    {
+        //        for (int j = 0; j < mda.GetLength(1); j++)
+        //        {
+        //            Console.Write(i + j + " ");
+        //        }
+        //        Console.WriteLine();
+        //    }
+        /// <summary>
+        /// 随机数组从小到大排序
+        /// </summary>
+        //static void Bubbing()
+        //{
+        //    int[] nums = new int[10];
+        //    Random random = new Random();
+
+        //    //随机数值
+        //    for (int i = 0; i < 10; i++)
+        //    {
+        //        nums[i] = random.Next(0, 100);
+        //    }
+        //    //冒泡排序 从小到大
+        //    for (int i = 1; i < nums.Length; i++)
+        //    {
+        //        for (int j = 0 ; j < nums.Length - i; j++)
+        //        {
+        //            if (nums[j] > nums[j+1])
+
+        //            {
+        //                int temp = nums[j];
+        //                nums[j] = nums[j+1];
+        //                nums[j+1] = temp;
+        //            }//eles
+        //        }
+        //    }
+        //    for (int i = 0; i < nums.Length; i++)
+        //    {
+        //        Console.WriteLine(nums[i]);
+        //    }
+        //    return;
+        //}
+        /// <summary>
+        /// 找到100以内的质数
+        /// </summary>
+        /// <param name="find"></param>
+        //static void Mach(int find)
+        //{
+        //    for (int i = 2; i < 101; i++)
+        //    {
+        //        for (int j = 2; j < i; j++)
+        //        {
+        //            if (i % j == 0)
+        //            {
+
+        //                break;
+        //            }
+        //            else
+        //            {
+        //                if (j == i - 1)
+        //                {
+        //                    Console.WriteLine(i);
+        //                }//else
+        //            }
+        //        }
+        //    }
+        //}
+        /// <summary>
+        /// 求一组数组的最大值和最小值
+        /// </summary>
+        /// <param name="sums"></param>
+        //static void MaxMin(double sums)
+        //{
+        //    int[] doubles = { 95, 100, 78, 77, 86, 65, 70, 55 };
+        //    int max = doubles[0], min = doubles[0];
+        //    for (int i = 1; i < doubles.Length; i++)
+        //    {
+        //        if (doubles[i] > max)
+        //        {
+        //            max = doubles[i];
+        //        }
+        //        else if (doubles[i] < min)
+        //        {
+        //            min = doubles[i];
+        //        }
+        //    }
+        //    Console.WriteLine($"最大值{max},最小值{min}");
+        //    return;
+        //}
+        /// <summary>
+        /// 用for循环求和
+        /// </summary>从99开始每次递减2
+        /// <param name="ums"></param>
+        //static void Int(int ums)
+        //{
+        //    int sum = 0;
+        //    for (int i = 99; i > 0; i -= 2)
+        //    {
+        //        sum += i;
+        //    }
+        //    Console.WriteLine(sum);
+        //    return;
+        //}
+        /// <summary>
+        /// 用for循环输出数组里的字符
+        /// </summary>
+        /// <param name="names">一串数组</param>
+        //static void Font2(string[] names)
+        //{
+        //    for (int i = 0; i < names.Length; i++)
+        //    {
+        //        Console.WriteLine(names[i]);
+
+        //    }
+        //    return;
+        //}
+        /// <summary>
+        /// 用While输出数字，每次增加2，到9停止
+        /// </summary>
+        /// <param name="number">输出的数组</param>
+        //static void Whiles(string[] number)
+        //{
+        //    int i = -1;
+        //    while (i < 9)
+        //    {
+        //        i += 2;
+        //        Console.WriteLine(i);            //while循环
+        //    }
+        //    return;
+        //}
+
+        /// <summary>
+        /// 用for循环输出数组的内容
+        /// </summary>
+        /// <param name="names">一个数组</param>
+        //static void Font(string[]names)
+        //{
+        //    for (int i = 0; i < names.Length; i++)
+        //    {
+        //        Console.WriteLine(names[i]);    //for循环
+        //    }
+        //    return;
+        //}
+      
     }
 }
