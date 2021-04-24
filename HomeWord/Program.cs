@@ -10,8 +10,17 @@ namespace HomeWord
         /// <param name="args"></param>
         static void Main(string[] args)
         {
-            //1.将之前作业封装成方法（自行思考参数和返回值），并调用执行。
+            //1.利用ref调用Swap()方法交换两个同学的床位号
+            //int n1 = 201, n2 = 202;
+            //Test(ref n1, ref n2);
+            //Console.WriteLine(n1);
+            //Console.WriteLine(n2);
+            //2.将登陆的过程封装成一个方法LogOn()，调用之后能够获得：
+            //true / false，表示登陆是否成功
+            //string，表示登陆失败的原因
 
+
+            //1.将之前作业封装成方法（自行思考参数和返回值），并调用执行。
             //且以后作业，如无特别声明，皆需使用方法封装。
             //2.计算得到源栈同学的平均成绩（精确到两位小数），方法名GetAverage()
             //double[] sums = { 75, 80.5, 67.5, 99.5, 75.4, 65.8 };
@@ -106,7 +115,18 @@ namespace HomeWord
 
 
         }
-
+        /// <summary>
+        /// 用ref调换床位
+        /// </summary>
+        /// <param name="n1">201</param>
+        /// <param name="n2">202</param>
+        //static void Test(ref int n1, ref int n2)
+        //{
+        //    int temp = n1;
+        //    n1 = n2;
+        //    n2 = temp;
+        //    return;
+        //}
         /// <summary>
         /// 求一组数组的平均值
         /// </summary>
@@ -121,7 +141,6 @@ namespace HomeWord
         //    }
         //    return avg / sums.Length;
         //}      
-
         ///猜数字游戏
         ///
         //static void GuessMe()
@@ -319,6 +338,6 @@ namespace HomeWord
         //    }
         //    return;
         //}
-      
+
     }
 }
