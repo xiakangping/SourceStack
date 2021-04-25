@@ -10,16 +10,25 @@ namespace HomeWord
         /// <param name="args"></param>
         static void Main(string[] args)
         {
+            //1.定义一个生成数组的方法：int[] GetArray()，其元素随机生成从小到大排列。利用可选参数控制：
+            //2.最小值min（默认为1）
+            //3.相邻两个元素之间的最大差值gap（默认为5）
+            //  元素个数length（默认为10个）
+            //GetArray(1, 5, 10);
+
+            //4.实现二分查找，方法名BinarySeek(int[] numbers, int target)：
+            //int[] numbers = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
+            //int target = BinarySeek(numbers,8);
+            //Console.WriteLine(target);
+            //  传入一个有序（从大到小 / 从小到大）数组和数组中要查找的元素
+            //  如果找到，返回该元素所在的下标；否则，返回 - 1
             //1.利用ref调用Swap()方法交换两个同学的床位号
             //int n1 = 201, n2 = 202;
             //Test(ref n1, ref n2);
-            //Console.WriteLine(n1);
-            //Console.WriteLine(n2);
             //2.将登陆的过程封装成一个方法LogOn()，调用之后能够获得：
             //true / false，表示登陆是否成功
             //string，表示登陆失败的原因
-
-
+            //LogOn();
             //1.将之前作业封装成方法（自行思考参数和返回值），并调用执行。
             //且以后作业，如无特别声明，皆需使用方法封装。
             //2.计算得到源栈同学的平均成绩（精确到两位小数），方法名GetAverage()
@@ -116,15 +125,94 @@ namespace HomeWord
 
         }
         /// <summary>
+        /// 随机数组
+        /// </summary>
+        /// <param name="min">默认值为1</param>
+        /// <param name="gap">在5以内递增</param>
+        /// <param name="lenght">数组长度，默认为10</param>
+        /// <returns></returns>
+        //static int[] GetArray(int min = 1, int gap = 5, int lenght = 10)
+        //{
+        //    int[] array = new int[lenght];
+        //    Random random = new Random();
+        //    array[0] = random.Next(min, int.MaxValue);
+        //    Console.WriteLine(array[0]);
+
+        //    for (int i = 1; i < array.Length; i++)
+        //    {
+        //        array[i] = random.Next(gap) + array[i - 1];
+        //        Console.WriteLine(array[i]);
+        //    }
+        //    return array;
+        //}
+        /// <summary>
+        /// 二分查找
+        /// </summary>
+        /// <param name="numbers">数组</param>
+        /// <param name="target">目标</param>
+        /// <returns></returns>
+        //static int BinarySeek(int[] numbers, int target)
+        //{
+        //    int left = 0, right = numbers.Length - 1;
+
+        //    while (left <= right)
+        //    {
+        //        int middle = (left + right) / 2;
+        //        if (target == numbers[middle])
+        //        {
+        //            return middle;
+        //        }
+        //        else if (target > numbers[middle])
+        //        {
+        //            left = middle + 1;
+        //        }
+        //        else if (target < numbers[middle])
+        //        {
+        //            right = middle - 1;
+        //        }//else
+        //    }
+        //    return -1;
+        //}       
+        /// <summary>
+        /// 用户登录方法
+        /// </summary>
+        //static void LogOn()
+        //{
+        //    string username = "夏康平";
+        //    string password = "123456";
+        //    Console.WriteLine("请输入用户名");
+        //    if (username == Console.ReadLine())
+        //    {
+        //        Console.WriteLine("请输入密码");
+
+        //        if (password == Console.ReadLine())
+        //        {
+        //            Console.WriteLine("登录成功");
+        //        }
+        //        else
+        //        {
+        //            Console.WriteLine("密码错误");
+
+        //        }
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("用户名不存在");
+        //    }
+        //    return;
+        //}
+        /// <summary>
         /// 用ref调换床位
         /// </summary>
         /// <param name="n1">201</param>
         /// <param name="n2">202</param>
         //static void Test(ref int n1, ref int n2)
-        //{
+        //{           
         //    int temp = n1;
         //    n1 = n2;
         //    n2 = temp;
+        //    Console.WriteLine(n1);
+        //    Console.WriteLine(n2);
         //    return;
         //}
         /// <summary>

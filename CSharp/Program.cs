@@ -7,64 +7,38 @@ namespace CSharp
     {
         static void Main(string[] args)
         {
-            //随机生成一个大于0小于1000的整数
-            //用户输入一个猜测值，系统进行判断，告知用户猜测的数是“大了”，还是“小了”
-            //没猜中可以继续猜，但最多不能超过10次
-            //如果5次之内猜中，输出：你真牛逼！
-            //如果8次之内猜中，输出：不错嘛！
-            //10次还没猜中，输出：(～￣(OO)￣)ブ
-            GuessMe();
-
-
-
-
-        }
-        static void GuessMe()
-        {
-            int nums = new Random().Next(1, 1000);
-            //Console.WriteLine("随机数是:" + nums);
-            Console.WriteLine("请输入数字");
-            for (int i = 0; i < 11; i++)
+            //定义一个生成数组的方法：int[] GetArray()，其元素随机生成从小到大排列。
+            //利用可选参数控制：
+            //最小值min（默认为1）
+            //相邻两个元素之间的最大差值gap（默认为5）
+            //元素个数length（默认为10个）
+            GetArray(1,5,10);
+            
+            /// <summary>
+            /// 随机生成一个数组从1-9
+            /// </summary>
+            /// <param name="min">默认为1</param>
+            /// <param name="gap">每次递增5以内</param>
+            /// <param name="lenght">数组长度</param>
+            /// <returns>返回值</returns>
+            static int[] GetArray(int min = 1, int gap = 5, int lenght = 10)
             {
-                int input = Convert.ToInt32(Console.ReadLine());
+                int[] array = new int[lenght];
+                Random random = new Random();
+                array[0] = random.Next(min, int.MaxValue);
+                Console.WriteLine(array[0]);
 
-                if (input > nums)
+                for (int i = 1; i < array.Length; i++)
                 {
-
-                    Console.WriteLine($"太大了，还剩{10 - i}次");
+                    array[i] = random.Next(gap) + array[i - 1];
+                    Console.WriteLine(array[i]);
                 }
-                else if (input < nums)
-                {
-                    Console.WriteLine($"太小了，还剩{10 - i}次");
-                }
-                else
-                {
-                    Console.WriteLine("恭喜你，猜中了");
-                    if (i <= 5)
-                    {
-                        Console.WriteLine("你真牛逼！");
-                    }
-                    else if (i <= 8)
-                    {
-                        Console.WriteLine("不错嘛！");
-                    }
-                    else if (i<=10)
-                    {
-                        Console.WriteLine("太菜了！！！");
-                    }
-                    else if (input != nums && i >= 10)
-                    {
-                        Console.WriteLine("(～￣(OO)￣)ブ");
-                    }//else
-                    break;
-
-                }
-              
+                return array;
             }
-        }
+
+
+
+        }     
     }
 }
-
-
-
 
