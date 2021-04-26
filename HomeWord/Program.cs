@@ -10,6 +10,14 @@ namespace HomeWord
         /// <param name="args"></param>
         static void Main(string[] args)
         {
+            // 观察“一起帮”的：
+            //注册 / 登录功能，定义一个User类，
+            //包含字段：Name（用户名）、Password（密码）
+            //和 邀请人（InvitedBy），和方法：Register()、Login()
+            //求助版块，定义一个类Problem，
+            //包含字段：标题（Title）、正文（Body）、悬赏（Reward）、发布时间（PublishDateTime）和作者（Author），和方法Publish()
+            //帮帮币版块，定义一个类HelpMoney，表示一行帮帮币交易数据，包含你认为应该包含的字段和方法
+            //为这些类的字段和方法设置合适的访问修饰符。
             //1.定义一个生成数组的方法：int[] GetArray()，其元素随机生成从小到大排列。利用可选参数控制：
             //2.最小值min（默认为1）
             //3.相邻两个元素之间的最大差值gap（默认为5）
