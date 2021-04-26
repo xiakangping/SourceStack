@@ -7,5 +7,6 @@ namespace Homework
       //包含你认为应该包含的字段和方法为这些类的字段和方法设置合适的访问修饰符。
     class HelpMoney
     {
+
     }
 }

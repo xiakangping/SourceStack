@@ -12,5 +12,10 @@ namespace Homework
         public int Reward;
         public DateTime PublishDateTime;
         public string Author;
+        
+        static void Publish()
+        {
+
+        }
     }
 }

@@ -7,12 +7,9 @@ namespace CSharp
     {
         static void Main(string[] args)
         {
-         
+            Shiyan.greet();
         }
-        static int moot()
-        {
-            
-        }
+        
         
     }
 }

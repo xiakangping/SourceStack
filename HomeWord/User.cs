@@ -11,7 +11,15 @@ namespace Homework
     {
         public string Name;
         public string Password;
-        public string InvitedBy;
+        public User InvitedBy;
 
+        static void Register()
+        {
+
+        }
+        static void Login()
+        {
+             
+        }
     }
 }
