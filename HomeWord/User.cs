@@ -9,15 +9,16 @@ namespace Homework
  //和方法：Register()、Login()
     class User
     {
-        public string Name;
-        public string Password;
-        public User InvitedBy;
+        public string _Name;
+        public string _Password;
+        public User _InvitedBy;
 
-        static void Register()
+        public static bool Register()
         {
-
+            
         }
-        static void Login()
+        
+        public static bool Login()
         {
              
         }
