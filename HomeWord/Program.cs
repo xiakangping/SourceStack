@@ -132,6 +132,8 @@ namespace HomeWord
 
 
         }
+        //user.Password在类的外部只能改不能读
+
         /// <summary>
         /// 随机数组
         /// </summary>

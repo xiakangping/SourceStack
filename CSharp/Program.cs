@@ -8,14 +8,15 @@ namespace CSharp
 
         static void Main(string[] args)
         {
-            int x = Program.GetMax(1, 3);
-            Console.WriteLine(x);
-        }
+            Shiyan xia = new Shiyan();
+            xia._Name = "544";
+            xia._Age = 101;
+            xia._Gender = '女';
+            xia.CHWL();
 
-        public static int GetMax(int n1, int n2)
-        {
-            return n1 > n2 ? n1 : n2;
         }
+     
+       
 
     }
 }
