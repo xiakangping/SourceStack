@@ -1,5 +1,6 @@
-﻿using System;
-
+﻿using Homework;
+using System;
+using User;
 namespace HomeWord
 {
     class Program
@@ -10,6 +11,9 @@ namespace HomeWord
         /// <param name="args"></param>
         static void Main(string[] args)
         {
+            User x= new User("","");
+            x._Name = "admin";
+
             // 观察“一起帮”的：
             //注册 / 登录功能，定义一个User类，
             //包含字段：Name（用户名）、Password（密码）
@@ -26,7 +30,7 @@ namespace HomeWord
 
             //4.实现二分查找，方法名BinarySeek(int[] numbers, int target)：
             //int[] numbers = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 };
-            //int target = BinarySeek(numbers,8);
+            //int target = BinarySeek(numbers, 2);
             //Console.WriteLine(target);
             //  传入一个有序（从大到小 / 从小到大）数组和数组中要查找的元素
             //  如果找到，返回该元素所在的下标；否则，返回 - 1
@@ -132,7 +136,8 @@ namespace HomeWord
 
 
         }
-        //user.Password在类的外部只能改不能读
+   
+
 
         /// <summary>
         /// 随机数组
@@ -182,7 +187,7 @@ namespace HomeWord
         //        }//else
         //    }
         //    return -1;
-        //}       
+        //}
         /// <summary>
         /// 用户登录方法
         /// </summary>
@@ -436,6 +441,6 @@ namespace HomeWord
         //    }
         //    return;
         //}
-
+    
     }
 }

@@ -18,10 +18,15 @@ namespace Homework
     //4.设计一种方式，保证：
     //1.每一个Problem对象一定有Body赋值
     //2.每一个User对象一定有Name和Password赋值
-    class User
+    public class User
     {
+        public  User(string name, string password)  //每一个User对象一定有Name和Password赋值
+        {
+            _name = name;
+            _password = password;
+        }
         private string _name;
-        public string _Name
+        public string Name   //如果user.Name为“admin”，输入时修改为“系统管理员”
         {
             get { return _name; }
             
@@ -37,15 +42,17 @@ namespace Homework
                 }
             }
         }
-        public string _Password;
-        public string _password
+        private string _password;
+        public string Password //user.Password在类的外部只能改不能读
         {
+            //get{}
             set { _password = value; }
         }
       
-        public User _invitedBy { get; set; }
-        private string _inviteCode { get; set; }
-        private string authCode { get; set; }
+        public User InvitedBy { get; set; }
+        public string InviteCode { get; set; }
+        public string AuthCode { get; set; }
+
 
 
         //public static bool Register()

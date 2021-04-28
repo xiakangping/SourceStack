@@ -17,14 +17,14 @@ namespace Homework
     //2.每一个User对象一定有Name和Password赋值
     class Problem
     {
-        public string _title { get; set; }
-        public string _body { get; set; }
-        public Problem(string body)
+        public string Title { get; set; }
+        public string Body { get; set; }
+        public Problem(string body)  //每一个Problem对象一定有Body赋值
         {
-            _body = body;
+            Body = body;
         }
-        public int _reward;
-        public int _Reward
+        public int _reward;   
+        public int Reward      //problem.Reward不能为负数
         {
             get { return _reward; }
             set
@@ -34,15 +34,19 @@ namespace Homework
                     Console.WriteLine("悬赏不能为负数");
                     return;
                 }
+                else
+                {
+                    _reward = value; 
+                }
             }
         }
-        public DateTime _publishDateTime { get; set; }
-        public User _author { get; set; }
-        private string[] _keyword = new string[10];
+        public DateTime PublishDateTime { get; set; }
+        public User Author { get; set; }
+        private string[] _Keyword = new string[10]; //一起帮的求助可以有多个（最多10个）关键字，请为其设置索引器，以便于我们通过其整数下标进行读写。
         public string this[int index]
         {
-            get { return _keyword[index - 1]; }
-            set { _keyword[index - 1] = value; }           
+            get { return _Keyword[index - 1]; }
+            set { _Keyword[index - 1] = value; }           
         }
         
     }
