@@ -23,20 +23,20 @@ namespace Homework
         {
             Body = body;
         }
-        public int _reward;   
+        public int _reward;
         public int Reward      //problem.Reward不能为负数
         {
             get { return _reward; }
             set
             {
-                if (value<0)
+                if (value < 0)
                 {
                     Console.WriteLine("悬赏不能为负数");
                     return;
                 }
                 else
                 {
-                    _reward = value; 
+                    _reward = value;
                 }
             }
         }
@@ -46,8 +46,8 @@ namespace Homework
         public string this[int index]
         {
             get { return _Keyword[index - 1]; }
-            set { _Keyword[index - 1] = value; }           
+            set { _Keyword[index - 1] = value; }
         }
-        
+
     }
 }

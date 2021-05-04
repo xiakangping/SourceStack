@@ -10,6 +10,7 @@ namespace Homework
     //  3.思考Respoitory应该是static类还是实例类更好
     class Repoistory
     {
-        public static int  
+        private const int version = 0;
+        public static readonly string connection;
     }
 }

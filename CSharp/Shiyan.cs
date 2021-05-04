@@ -10,5 +10,8 @@ namespace CSharp
     {
        
     }
+    public class Teacher
+    {
 
+    }
 }

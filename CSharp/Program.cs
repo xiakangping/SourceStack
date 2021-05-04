@@ -8,9 +8,7 @@ namespace CSharp
 
         static void Main(string[] args)
         {
-           
-           
-
+            
         }
      
        
