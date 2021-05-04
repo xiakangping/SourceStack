@@ -15,6 +15,14 @@ namespace Homework
     //4.设计一种方式，保证：
     //1.每一个Problem对象一定有Body赋值
     //2.每一个User对象一定有Name和Password赋值
+
+    //1. 考虑求助（Problem）的以下方法/属性，哪些适合实例，哪些适合静态，然后添加到类中：
+    //  1.Publish()：发布一篇求助，并将其保存到数据库
+    //  2.Load(int Id)：根据Id从数据库获取一条求助
+    //  3.Delete(int Id)：根据Id删除某个求助
+    //  4.repoistory：可用于在底层实现上述方法和数据库的连接操作等
+
+
     class Problem
     {
         public string Title { get; set; }

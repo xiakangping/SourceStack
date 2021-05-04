@@ -8,7 +8,8 @@ namespace CSharp
 
         static void Main(string[] args)
         {
-            
+            Shiyan xia = new Shiyan();
+            Console.WriteLine();
         }
      
        

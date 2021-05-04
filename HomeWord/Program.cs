@@ -10,6 +10,7 @@ namespace HomeWord
         /// 
         /// </summary>
         /// <param name="args"></param>
+        /// 
         static void Main(string[] args)
         {
             // 观察“一起帮”的：
@@ -136,8 +137,6 @@ namespace HomeWord
 
         }
    
-
-
         /// <summary>
         /// 随机数组
         /// </summary>
