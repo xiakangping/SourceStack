@@ -25,14 +25,25 @@ namespace Homework
 
     class Problem
     {
+        /// <summary>
+        /// 求助方法
+        /// </summary>
         public static void Publish()
         {
 
         }
+        /// <summary>
+        /// 获取求助方法
+        /// </summary>
+        /// <param name="Id"></param>
         public void Load(int Id)
         {
 
         }
+        /// <summary>
+        /// 删除求助方法
+        /// </summary>
+        /// <param name="Id"></param>
         public void Delete(int Id)
         {
 
