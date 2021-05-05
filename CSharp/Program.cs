@@ -1,4 +1,5 @@
 ﻿using System;
+using YZ;
 
 namespace CSharp
 {
@@ -8,8 +9,7 @@ namespace CSharp
 
         static void Main(string[] args)
         {
-            Shiyan xia = new Shiyan();
-            Console.WriteLine();
+            
         }
      
        

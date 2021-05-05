@@ -25,6 +25,20 @@ namespace Homework
 
     class Problem
     {
+        public static void Publish()
+        {
+
+        }
+        public void Load(int Id)
+        {
+
+        }
+        public void Delete(int Id)
+        {
+
+        }
+        Repoistory repoistory = new Repoistory();
+       
         public string Title { get; set; }
         public string Body { get; set; }
         public Problem(string body)  //每一个Problem对象一定有Body赋值
