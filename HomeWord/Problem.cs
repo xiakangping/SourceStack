@@ -29,20 +29,30 @@ namespace Homework
     // 2.确保每个Content对象都有kind的非空值
     // 3.Content中的createTime，不能被子类使用，但只读属性PublishTime使用它为外部提供内容的发布时间
     // 4.其他方法和属性请自行考虑，尽量贴近一起帮的功能实现。
-    class Content
+    public class Content
     {
-        
+        public string kind { get; set; }
     }
-    class Suggest : Content
+    public class Suggest : Content
     {
+        public Suggest(string kind)
+        {
 
+        }
     }
-    class Article : Content
+    public class Article : Content
     {
+        public Article(string kind)
+        {
 
+        }
     }
-    class Problem : Content
+    public class Problem : Content
     {
+        public Problem(string kind)
+        {
+
+        }
         /// <summary>
         /// 求助方法
         /// </summary>
