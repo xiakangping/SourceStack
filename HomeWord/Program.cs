@@ -41,6 +41,7 @@ namespace HomeWord
             //true / false，表示登陆是否成功
             //string，表示登陆失败的原因
             //LogOn();
+
             //1.将之前作业封装成方法（自行思考参数和返回值），并调用执行。
             //且以后作业，如无特别声明，皆需使用方法封装。
             //2.计算得到源栈同学的平均成绩（精确到两位小数），方法名GetAverage()
@@ -136,7 +137,7 @@ namespace HomeWord
 
 
         }
-   
+
         /// <summary>
         /// 随机数组
         /// </summary>
@@ -189,30 +190,35 @@ namespace HomeWord
         /// <summary>
         /// 用户登录方法
         /// </summary>
-        //static void LogOn()
+        /// //2.将登陆的过程封装成一个方法LogOn()，调用之后能够获得：
+        //true / false，表示登陆是否成功
+        //string，表示登陆失败的原因
+        //static bool LogOn()
         //{
-        //    string username = "夏康平";
-        //    string password = "123456";
-        //    Console.WriteLine("请输入用户名");
-        //    if (username == Console.ReadLine())
+        //    string name = "夏康平", password = "123", reason = "用户名密码错误";
+        //    Console.WriteLine("输入用户名");
+        //    string usname = Console.ReadLine();
+        //    if (usname != name)
         //    {
-        //        Console.WriteLine("请输入密码");
-
-        //        if (password == Console.ReadLine())
-        //        {
-        //            Console.WriteLine("登录成功");
-        //        }
-        //        else
-        //        {
-        //            Console.WriteLine("密码错误");
-
-        //        }
+        //        Console.WriteLine(reason);
+        //        return false;
         //    }
         //    else
         //    {
-        //        Console.WriteLine("用户名不存在");
+        //        Console.WriteLine("请输入密码");
+        //        string uspassword = Console.ReadLine();
+        //        if (uspassword != password)
+        //        {
+        //            Console.WriteLine(reason);
+        //            return false;
+        //        }
+        //        else
+        //        {
+
+        //            Console.WriteLine("true");
+        //            return true;
+        //        }
         //    }
-        //    return;
         //}
         /// <summary>
         /// 用ref调换床位
@@ -439,6 +445,7 @@ namespace HomeWord
         //    }
         //    return;
         //}
-    
+
+
     }
 }

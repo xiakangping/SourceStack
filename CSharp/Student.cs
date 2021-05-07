@@ -4,12 +4,14 @@ using System.Text;
 
 namespace YZ
 {
-    class Student
+    internal class Student
     {
-        public static void moot()
+        public Student(string name)
         {
-
+            Console.WriteLine($"欢迎德莱联盟{name}");
         }
     }
+
+
 
 }

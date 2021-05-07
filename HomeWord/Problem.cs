@@ -25,62 +25,62 @@ namespace Homework
 
     class Problem
     {
-        /// <summary>
-        /// 求助方法
-        /// </summary>
-        public static void Publish()
-        {
+        ///// <summary>
+        ///// 求助方法
+        ///// </summary>
+        //public static void Publish()
+        //{
 
-        }
-        /// <summary>
-        /// 获取求助方法
-        /// </summary>
-        /// <param name="Id"></param>
-        public void Load(int Id)
-        {
+        //}
+        ///// <summary>
+        ///// 获取求助方法
+        ///// </summary>
+        ///// <param name="Id"></param>
+        //public void Load(int Id)
+        //{
 
-        }
-        /// <summary>
-        /// 删除求助方法
-        /// </summary>
-        /// <param name="Id"></param>
-        public void Delete(int Id)
-        {
+        //}
+        ///// <summary>
+        ///// 删除求助方法
+        ///// </summary>
+        ///// <param name="Id"></param>
+        //public void Delete(int Id)
+        //{
 
-        }
-        Repoistory repoistory = new Repoistory();
+        //}
+        //Repoistory repoistory = new Repoistory();
        
-        public string Title { get; set; }
-        public string Body { get; set; }
-        public Problem(string body)  //每一个Problem对象一定有Body赋值
-        {
-            Body = body;
-        }
-        public int _reward;
-        public int Reward      //problem.Reward不能为负数
-        {
-            get { return _reward; }
-            set
-            {
-                if (value < 0)
-                {
-                    Console.WriteLine("悬赏不能为负数");
-                    return;
-                }
-                else
-                {
-                    _reward = value;
-                }
-            }
-        }
-        public DateTime PublishDateTime { get; set; }
-        public User Author { get; set; }
-        private string[] _Keyword = new string[10]; //一起帮的求助可以有多个（最多10个）关键字，请为其设置索引器，以便于我们通过其整数下标进行读写。
-        public string this[int index]
-        {
-            get { return _Keyword[index - 1]; }
-            set { _Keyword[index - 1] = value; }
-        }
+        //public string Title { get; set; }
+        //public string Body { get; set; }
+        //public Problem(string body)  //每一个Problem对象一定有Body赋值
+        //{
+        //    Body = body;
+        //}
+        //public int _reward;
+        //public int Reward      //problem.Reward不能为负数
+        //{
+        //    get { return _reward; }
+        //    set
+        //    {
+        //        if (value < 0)
+        //        {
+        //            Console.WriteLine("悬赏不能为负数");
+        //            return;
+        //        }
+        //        else
+        //        {
+        //            _reward = value;
+        //        }
+        //    }
+        //}
+        //public DateTime PublishDateTime { get; set; }
+        //public User Author { get; set; }
+        //private string[] _Keyword = new string[10]; //一起帮的求助可以有多个（最多10个）关键字，请为其设置索引器，以便于我们通过其整数下标进行读写。
+        //public string this[int index]
+        //{
+        //    get { return _Keyword[index - 1]; }
+        //    set { _Keyword[index - 1] = value; }
+        //}
 
     }
 }
