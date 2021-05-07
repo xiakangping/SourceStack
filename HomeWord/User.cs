@@ -16,57 +16,69 @@ namespace Homework
     //  2.Load(int Id)：根据Id从数据库获取一条求助
     //  3.Delete(int Id)：根据Id删除某个求助
     //  4.repoistory：可用于在底层实现上述方法和数据库的连接操作等
-    //
+    //    //
+    //1.让User类无法被继承
+    //2.观察一起帮的求助（Problem）、文章（Article）和意见建议（Suggest），
+    //根据他们的特点，抽象出一个父类：内容（Content）
+    // 1.Content中有一个字段：kind，
+    // 记录内容的种类（problem/article/suggest等），只能被子类使用
+    // 2.确保每个Content对象都有kind的非空值
+    // 3.Content中的createTime，不能被子类使用，但只读属性PublishTime使用它为外部提供内容的发布时间
+    // 4.其他方法和属性请自行考虑，尽量贴近一起帮的功能实现。
+    //3.实例化文章和意见建议，调用他们：
+    // 1.继承自父类的属性和方法
+    // 2.自己的属性和方法
+    //4.再为之前所有类（含User、HelpMoney等）抽象一个基类：Entity，包含一个只读的Id属性。试一试，Suggest能有Id属性么？
 
 
     /// <summary>
     /// 系统管理员的作业
     /// </summary>
-//    public class User
-//    {
-//        public User(string name, string password)  //每一个User对象一定有Name和Password赋值
-//        {
-//            _name = name;
-//            _password = password;
-//        }
-//        private string _name;
-//        public string Name   //如果user.Name为“admin”，输入时修改为“系统管理员”
-//        {
-//            get { return _name; }
+    sealed class User //让User类无法被继承
+    {
+        public User(string name, string password)  //每一个User对象一定有Name和Password赋值
+        {
+            _name = name;
+            _password = password;
+        }
+        private string _name;
+        public string Name   //如果user.Name为“admin”，输入时修改为“系统管理员”
+        {
+            get { return _name; }
 
-//            set
-//            {
-//                if (_name == "admin")
-//                {
-//                    _name = "系统管理员";
-//                }
-//                else
-//                {
-//                    _name = value;
-//                }
-//            }
-//        }
-//        private string _password;
-//        public string Password //user.Password在类的外部只能改不能读
-//        {
-//            //get{}
-//            set { _password = value; }
-//        }
+            set
+            {
+                if (_name == "admin")
+                {
+                    _name = "系统管理员";
+                }
+                else
+                {
+                    _name = value;
+                }
+            }
+        }
+        private string _password;
+        public string Password //user.Password在类的外部只能改不能读
+        {
+            //get{}
+            set { _password = value; }
+        }
 
-//        public User InvitedBy { get; set; }
-//        public string InviteCode { get; set; }
-//        public string AuthCode { get; set; }
+        public User InvitedBy { get; set; }
+        public string InviteCode { get; set; }
+        public string AuthCode { get; set; }
 
 
-//        public static bool Register()
-//        {
+        public static bool Register()
+        {
 
-//        }
+        }
 
-//        public static bool Login()
-//        {
+        public static bool Login()
+        {
 
-//        }
-//    }
+        }
+    }
 
 }
