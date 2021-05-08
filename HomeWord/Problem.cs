@@ -31,7 +31,7 @@ namespace Homework
     // 4.其他方法和属性请自行考虑，尽量贴近一起帮的功能实现。
     public class Content
     {
-        public string kind { get; set; }
+        internal string kind { get; set; }
     }
     public class Suggest : Content
     {

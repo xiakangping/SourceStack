@@ -4,14 +4,34 @@ using System.Text;
 
 namespace YZ
 {
-    internal class Student
+    class Animal : Legthing
     {
-        public Student(string name)
+        public void Run()
         {
-            Console.WriteLine($"欢迎德莱联盟{name}");
+
         }
     }
+    class Cat : Animal
+    {
 
+    }
+    class Dog : Animal
+    {
 
+    }
+    class Legthing
+    {
+        int Lege { get; set; }
+    }
+    class Table : Legthing
+    {
 
+    }
+    class Car
+    {
+        public void Run()
+        {
+
+        }
+    }
 }
