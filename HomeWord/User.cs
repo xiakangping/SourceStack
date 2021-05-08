@@ -28,7 +28,7 @@ namespace Homework
     /// <summary>
     /// 系统管理员的作业
     /// </summary>
-    sealed class User //让User类无法被继承
+    sealed class User:Entity //让User类无法被继承
     {
         public User(string name, string password)  //每一个User对象一定有Name和Password赋值
         {

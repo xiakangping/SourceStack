@@ -14,7 +14,7 @@ namespace Homework
       //4.设计一种方式，保证：
       //1.每一个Problem对象一定有Body赋值
       //2.每一个User对象一定有Name和Password赋值
-    class HelpMoney
+    class HelpMoney:Entuty
     {
         private DateTime Time { get; set; }
         private int Usable { get; set; }
