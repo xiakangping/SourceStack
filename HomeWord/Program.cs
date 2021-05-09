@@ -1,5 +1,4 @@
-﻿
-using Homework;
+﻿using Homework;
 using System;
 
 namespace HomeWord
@@ -11,8 +10,15 @@ namespace HomeWord
         /// </summary>
         /// <param name="args"></param>
         /// 
+        static void Publish(ContentService contentService)
+        {
+            contentService.Publish();
+        }
         static void Main(string[] args)
         {
+            Publish(new Article { Name = "Article"});
+            Publish(new Problem { Name = "Problem"});
+            Publish(new Suggest { Name = "Suggest"});
             // 观察“一起帮”的：
             //注册 / 登录功能，定义一个User类，
             //包含字段：Name（用户名）、Password（密码）
@@ -448,4 +454,19 @@ namespace HomeWord
 
 
     }
+
+    //internal class Suggest : ContentService
+    //{
+    //    public string Name { get; set; }
+    //}
+
+    //internal class Problem : ContentService
+    //{
+    //    public string Name { get; set; }
+    //}
+
+    //internal class Article : ContentService
+    //{
+    //    public string Name { get; set; }
+    //}
 }

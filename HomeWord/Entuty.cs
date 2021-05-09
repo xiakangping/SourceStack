@@ -1,6 +1,6 @@
 ﻿namespace Homework
 {
-    internal class Entuty
-    {
-    }
+    //internal class Entuty
+    //{
+    //}
 }

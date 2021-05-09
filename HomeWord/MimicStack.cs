@@ -11,46 +11,46 @@ namespace Homework
     //如果压入的数据已超过栈的深度（最大容量），提示“栈溢出”
     //如果已弹出所有数据，提示“栈已空”
 
-    public class MimicStack
-    {
-        int[] stack;
-        int top = 0;
-        const int bottom = 0;
-        public MimicStack(int size)
-        {
-            stack = new int[size];
-        }
-        public void Push(int element)
-        {
-            if (top <= stack.Length - 1)
-            {
-                stack[top] = element;
-                top++;
-            }
-            else
-            {
-                Console.WriteLine("栈溢出");
-            }
-        }
-        public void Push(params int[] array)
-        {
-            for (int i = 0; i < array.Length; i++)
-            {
-                Push(array[i]);
-            }
-        }
-        public int Pop()
-        {
-            if (top != bottom)
-            {
-                top--;
-                return stack[top];
-            }
-            else
-            {
-                Console.WriteLine("栈已空");
-                return -1;
-            }
-        }
-    }
+    //public class MimicStack
+    //{
+    //    int[] stack;
+    //    int top = 0;
+    //    const int bottom = 0;
+    //    public MimicStack(int size)
+    //    {
+    //        stack = new int[size];
+    //    }
+    //    public void Push(int element)
+    //    {
+    //        if (top <= stack.Length - 1)
+    //        {
+    //            stack[top] = element;
+    //            top++;
+    //        }
+    //        else
+    //        {
+    //            Console.WriteLine("栈溢出");
+    //        }
+    //    }
+    //    public void Push(params int[] array)
+    //    {
+    //        for (int i = 0; i < array.Length; i++)
+    //        {
+    //            Push(array[i]);
+    //        }
+    //    }
+    //    public int Pop()
+    //    {
+    //        if (top != bottom)
+    //        {
+    //            top--;
+    //            return stack[top];
+    //        }
+    //        else
+    //        {
+    //            Console.WriteLine("栈已空");
+    //            return -1;
+    //        }
+    //    }
+    //}
 }
