@@ -1,19 +1,20 @@
 ﻿using System;
-using YZ;
-
 namespace CSharp
 {
 
     class Program
     {
-        static void ServeLunch(Person person)
-        {
-            person.Eat();
-        }
+
         static void Main(string[] args)
         {
-            ServeLunch(new Teacher { Name = "fg" });
-            ServeLunch(new Student { Name = "xia" });
+
+            Ilearn xia = new Student();
+            xia.Practise();
+            IPlay X = new Student();
+            X.Practise();
+
+
+
         }
 
 
