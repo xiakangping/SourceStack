@@ -29,90 +29,93 @@ namespace Homework
     // 2.确保每个Content对象都有kind的非空值
     // 3.Content中的createTime，不能被子类使用，但只读属性PublishTime使用它为外部提供内容的发布时间
     // 4.其他方法和属性请自行考虑，尽量贴近一起帮的功能实现。
-    //public class Content
-    //{
-    //    static DateTime createTime
-    //    {
-    //        get;
-    //    }
-    //    internal string kind { get; set; }
-    //}
-    //public class Suggest : Content
-    //{
-    //    public Suggest(string kind)
-    //    {
-            
-    //    }
-    //}
-    //public class Article : Content
-    //{
-    //    public Article(string kind)
-    //    {
+    public class Content
+    {
+        static DateTime createtime
+        {
+            get;
+        }
+        internal string Kind { get; set; }
+    }
+    public interface 
+    public class Suggest /*建议*/ : Content
+    {
+        void Agree();
+        void Disagree();
+        public Suggest(string kind)
+        {
 
-    //    }
-    //}
-    //public class Problem : Content
-    //{
-    //    public Problem(string kind)
-    //    {
+        }
+    }
+    public class article /*文章*/ : Content
+    {
+        public article(string kind)
+        {
 
-    //    }
-    //    /// <summary>
-    //    /// 求助方法
-    //    /// </summary>
-    //    public static void Publish()
-    //    {
+        }
+    }
+    public class problem /*求助*/ : Content
+    {
+        public problem(string kind)
+        {
 
-    //    }
-    //    /// <summary>
-    //    /// 获取求助方法
-    //    /// </summary>
-    //    /// <param name="Id"></param>
-    //    public void Load(int Id)
-    //    {
+        }
+        /// <summary>
+        /// 求助方法
+        /// </summary>
+        public static void publish()
+        {
 
-    //    }
-    //    /// <summary>
-    //    /// 删除求助方法
-    //    /// </summary>
-    //    /// <param name="Id"></param>
-    //    public void Delete(int Id)
-    //    {
+        }
+        /// <summary>
+        /// 获取求助方法
+        /// </summary>
+        /// <param name="id"></param>
+        public void Load(int id)
+        {
 
-    //    }
-    //    Repoistory repoistory = new Repoistory();
+        }
+        /// <summary>
+        /// 删除求助方法
+        /// </summary>
+        /// <param name="id"></param>
+        public void Delete(int id)
+        {
 
-    //    public string Title { get; set; }
-    //    public string Body { get; set; }
-    //    public Problem(string body)  //每一个Problem对象一定有Body赋值
-    //    {
-    //        Body = body;
-    //    }
-    //    public int _reward;
-    //    public int Reward      //problem.Reward不能为负数
-    //    {
-    //        get { return _reward; }
-    //        set
-    //        {
-    //            if (value < 0)
-    //            {
-    //                Console.WriteLine("悬赏不能为负数");
-    //                return;
-    //            }
-    //            else
-    //            {
-    //                _reward = value;
-    //            }
-    //        }
-    //    }
-    //    public DateTime PublishDateTime { get; set; }
-    //    public User Author { get; set; }
-    //    private string[] _Keyword = new string[10]; //一起帮的求助可以有多个（最多10个）关键字，请为其设置索引器，以便于我们通过其整数下标进行读写。
-    //    public string this[int index]
-    //    {
-    //        get { return _Keyword[index - 1]; }
-    //        set { _Keyword[index - 1] = value; }
-    //    }
+        }
+        //    Repoistory repoistory = new Repoistory();
 
-    //}
-}
+        //    public string Title { get; set; }
+        //    public string Body { get; set; }
+        //    public Problem(string body)  //每一个Problem对象一定有Body赋值
+        //    {
+        //        Body = body;
+        //    }
+        //    public int _reward;
+        //    public int Reward      //problem.Reward不能为负数
+        //    {
+        //        get { return _reward; }
+        //        set
+        //        {
+        //            if (value < 0)
+        //            {
+        //                Console.WriteLine("悬赏不能为负数");
+        //                return;
+        //            }
+        //            else
+        //            {
+        //                _reward = value;
+        //            }
+        //        }
+        //    }
+        //    public DateTime PublishDateTime { get; set; }
+        //    public User Author { get; set; }
+        //    private string[] _Keyword = new string[10]; //一起帮的求助可以有多个（最多10个）关键字，请为其设置索引器，以便于我们通过其整数下标进行读写。
+        //    public string this[int index]
+        //    {
+        //        get { return _Keyword[index - 1]; }
+        //        set { _Keyword[index - 1] = value; }
+        //    }
+
+        }
+    }

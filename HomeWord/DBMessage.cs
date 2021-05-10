@@ -4,11 +4,15 @@ using System.Text;
 
 namespace Homework
 {
-    class DBMessage : ISendMessage
-    {
-        public void Send()
-        {
-            Console.WriteLine("睡觉");
-        }
-    }
+    //class DBMessage : ISendMessage
+    //{
+    //    //public void Send()
+    //    //{
+    //    //    Console.WriteLine("睡觉");
+    //    //}
+    //    void ISendMessage.Send()
+    //    {
+    //        Console.WriteLine("睡觉");
+    //    }
+    //}
 }

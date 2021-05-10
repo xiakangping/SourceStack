@@ -16,21 +16,28 @@ namespace HomeWord
         //}
         static void Main(string[] args)
         {
+            //ISendMessage x = new DBMessage();
+            //x.Send();
+            //ISendMessage xia = new EmailMessage();//实现Send接口 显示实现
+            //xia.Send();
             //EmailMessage xia = new EmailMessage();
             //xia.Send();
-            //DBMessage x = new DBMessage(); //实现Send接口
+            //DBMessage x = new DBMessage(); //实现Send接口 隐示实现
+            ////x.Send();
+            //ISendMessage xia = new User();
+            //xia.Send();   //同时继承了ISendMessage和IChat 显示实现
+            //IChat x = new User();
             //x.Send();
-
-        //    Publish(new Article { Name = "Article"});
-        //    Publish(new Problem { Name = "Problem"});
-        //    Publish(new Suggest { Name = "Suggest"});//多态
-        //    // 观察“一起帮”的：
-        //注册 / 登录功能，定义一个User类，
-        //包含字段：Name（用户名）、Password（密码）
-        //和 邀请人（InvitedBy），和方法：Register()、Login()
-        //求助版块，定义一个类Problem，
-        //包含字段：标题（Title）、正文（Body）、悬赏（Reward）、发布时间（PublishDateTime）和作者（Author），和方法Publish()
-        //帮帮币版块，定义一个类HelpMoney，表示一行帮帮币交易数据，包含你认为应该包含的字段和方法
+            //    Publish(new Article { Name = "Article"});
+            //    Publish(new Problem { Name = "Problem"});
+            //    Publish(new Suggest { Name = "Suggest"});//多态
+            //    // 观察“一起帮”的：
+            //注册 / 登录功能，定义一个User类，
+            //包含字段：Name（用户名）、Password（密码）
+            //和 邀请人（InvitedBy），和方法：Register()、Login()
+            //求助版块，定义一个类Problem，
+            //包含字段：标题（Title）、正文（Body）、悬赏（Reward）、发布时间（PublishDateTime）和作者（Author），和方法Publish()
+            //帮帮币版块，定义一个类HelpMoney，表示一行帮帮币交易数据，包含你认为应该包含的字段和方法
 
             //为这些类的字段和方法设置合适的访问修饰符。
             //1.定义一个生成数组的方法：int[] GetArray()，其元素随机生成从小到大排列。利用可选参数控制：

@@ -18,7 +18,7 @@ namespace Homework
     //  4.repoistory：可用于在底层实现上述方法和数据库的连接操作等
     //    //
     //1.让User类无法被继承
-   
+
     //3.实例化文章和意见建议，调用他们：
     // 1.继承自父类的属性和方法
     // 2.自己的属性和方法
@@ -28,13 +28,28 @@ namespace Homework
     /// <summary>
     /// 系统管理员的作业
     /// </summary>
-    //sealed class User:Entity //让User类无法被继承
+    //sealed class User : Entity, ISendMessage, IChat //让User类无法被继承
     //{
+    //    void IChat.Send()
+    //    {
+    //        Console.WriteLine("吃饭");
+    //    }
+
+    //    void ISendMessage.Send()
+    //    {
+    //        Console.WriteLine("睡觉");
+    //    }
+
     //    public User(string name, string password)  //每一个User对象一定有Name和Password赋值
     //    {
     //        _name = name;
     //        _password = password;
     //    }
+
+    //    public User()
+    //    {
+    //    }
+
     //    private string _name;
     //    public string Name   //如果user.Name为“admin”，输入时修改为“系统管理员”
     //    {
@@ -59,20 +74,22 @@ namespace Homework
     //        set { _password = value; }
     //    }
 
-    //    public User InvitedBy { get; set; }
-    //    public string InviteCode { get; set; }
-    //    public string AuthCode { get; set; }
 
 
-    //    public static bool Register()
-    //    {
+        //    public User InvitedBy { get; set; }
+        //    public string InviteCode { get; set; }
+        //    public string AuthCode { get; set; }
 
-    //    }
 
-    //    public static bool Login()
-    //    {
+        //    public static bool Register()
+        //    {
 
-    //    }
+        //    }
+
+        //    public static bool Login()
+        //    {
+
+        //    }
+        //}
     //}
-
 }
