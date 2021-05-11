@@ -7,49 +7,16 @@ namespace CSharp
 {
     public abstract class Teacher
     {
-        public void Grow()
-        {
-
-        }
-        public int Age { get; set; }
-        public string Name { get; set; }
-        public abstract void Eat();
 
     }
-    class Student : Teacher, Ilearn,IPlay
+    public struct Bed
     {
-        public double Score { get; set; }
-      
-        public sealed override void Eat()
+        public int _number;
+        public double Price { get; set; }
+        public Bed(int number)
         {
-            Console.WriteLine("大锅饭");
+            _number = number;
+            Price = 50;
         }
-
-        public void Golesson()
-        {
-            Console.WriteLine("上学");
-        }
-
-        void IPlay.Practise()
-        {
-            Console.WriteLine("玩电脑");
-        }
-
-        void Ilearn.Practise()
-        {
-            Console.WriteLine("运动");
-        }
-     
     }
-    public interface Ilearn
-    {
-        public double Score { get; set; }
-        void Golesson();
-        void Practise();
-    }
-    public interface IPlay
-    {
-        void Practise();
-    }
-
 }

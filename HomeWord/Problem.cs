@@ -37,33 +37,36 @@ namespace Homework
         }
         internal string Kind { get; set; }
     }
-    public interface 
+
     public class Suggest /*建议*/ : Content
     {
-        void Agree();
-        void Disagree();
+        
         public Suggest(string kind)
         {
 
         }
+
     }
-    public class article /*文章*/ : Content
+    public class Article /*文章*/ : Content
     {
-        public article(string kind)
+        public Article(string kind)
         {
 
         }
+
     }
-    public class problem /*求助*/ : Content
+    public class Problem /*求助*/ : Content
     {
-        public problem(string kind)
+
+ 
+        public Problem(string kind)
         {
 
         }
         /// <summary>
         /// 求助方法
         /// </summary>
-        public static void publish()
+        public static void Publish()
         {
 
         }
@@ -83,6 +86,10 @@ namespace Homework
         {
 
         }
+
+     
+
+
         //    Repoistory repoistory = new Repoistory();
 
         //    public string Title { get; set; }
@@ -117,5 +124,5 @@ namespace Homework
         //        set { _Keyword[index - 1] = value; }
         //    }
 
-        }
+    }
     }

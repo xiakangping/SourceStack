@@ -1,5 +1,6 @@
 ﻿using Homework;
 using System;
+using static Homework.@struct;
 
 namespace HomeWord
 {
@@ -16,6 +17,10 @@ namespace HomeWord
         //}
         static void Main(string[] args)
         {
+            //Bed bed;                            //用代码证明struct定义的类型是值类型
+            //bed._number = 30;                   
+            //Console.WriteLine(bed._number); 
+
             //ISendMessage x = new DBMessage();
             //x.Send();
             //ISendMessage xia = new EmailMessage();//实现Send接口 显示实现

@@ -4,17 +4,11 @@ namespace CSharp
 
     class Program
     {
-
         static void Main(string[] args)
         {
-
-            Ilearn xia = new Student();
-            xia.Practise();
-            IPlay X = new Student();
-            X.Practise();
-
-
-
+            Bed bed;
+            bed._number = 30;
+            Console.WriteLine(bed._number);
         }
 
 

@@ -24,11 +24,11 @@ namespace Homework
     //    private string Notes { get; set; }
 
 
-    //    public void gain(int num)
+    //    public void Gain(int num)
     //    {
 
     //    }
-    //    public void freeze(int num)
+    //    public void Freeze(int num)
     //    {
 
     //    }
