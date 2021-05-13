@@ -28,51 +28,52 @@ namespace Homework
     /// <summary>
     /// 系统管理员的作业
     /// </summary>
-    //sealed class User : Entity, ISendMessage, IChat //让User类无法被继承
-    //{
-    //    void IChat.Send()
-    //    {
-    //        Console.WriteLine("吃饭");
-    //    }
+    /*sealed*/
+    class User : Entity, ISendMessage, IChat //让User类无法被继承
+    {
+        void IChat.Send()
+        {
+            Console.WriteLine("吃饭");
+        }
 
-    //    void ISendMessage.Send()
-    //    {
-    //        Console.WriteLine("睡觉");
-    //    }
+        void ISendMessage.Send()
+        {
+            Console.WriteLine("睡觉");
+        }
 
-    //    public User(string name, string password)  //每一个User对象一定有Name和Password赋值
-    //    {
-    //        _name = name;
-    //        _password = password;
-    //    }
+        //    public User(string name, string password)  //每一个User对象一定有Name和Password赋值
+        //    {
+        //        _name = name;
+        //        _password = password;
+        //    }
 
-    //    public User()
-    //    {
-    //    }
+        //    public User()
+        //    {
+        //    }
 
-    //    private string _name;
-    //    public string Name   //如果user.Name为“admin”，输入时修改为“系统管理员”
-    //    {
-    //        get { return _name; }
+        //    private string _name;
+        //    public string Name   //如果user.Name为“admin”，输入时修改为“系统管理员”
+        //    {
+        //        get { return _name; }
 
-    //        set
-    //        {
-    //            if (_name == "admin")
-    //            {
-    //                _name = "系统管理员";
-    //            }
-    //            else
-    //            {
-    //                _name = value;
-    //            }
-    //        }
-    //    }
-    //    private string _password;
-    //    public string Password //user.Password在类的外部只能改不能读
-    //    {
-    //        //get{}
-    //        set { _password = value; }
-    //    }
+        //        set
+        //        {
+        //            if (_name == "admin")
+        //            {
+        //                _name = "系统管理员";
+        //            }
+        //            else
+        //            {
+        //                _name = value;
+        //            }
+        //        }
+        //    }
+        //    private string _password;
+        //    public string Password //user.Password在类的外部只能改不能读
+        //    {
+        //        //get{}
+        //        set { _password = value; }
+        //    }
 
 
 
@@ -91,5 +92,6 @@ namespace Homework
 
         //    }
         //}
-    //}
+        //}
+    }
 }
