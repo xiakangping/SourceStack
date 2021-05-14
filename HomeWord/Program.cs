@@ -16,8 +16,8 @@ namespace HomeWord
         //    contentService.Publish();
         //}
         static void Main(string[] args)
-        {
-            
+        {                                
+
             //Bed bed;                            //用代码证明struct定义的类型是值类型
             //bed._number = 30;
             //Console.WriteLine(bed._number);
