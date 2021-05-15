@@ -10,29 +10,29 @@ namespace Homework
 
     class Datetime
     {
-        static DateTime GetFirstMonday(int year)
-        {
-            DateTime date = new DateTime(year, 1, 1);
-            while (date.DayOfWeek != DayOfWeek.Monday)
-            {
-                date = date.AddDays(1);
-            }
-            return date;
-        } 
-        static DateTime ShowWeeks(DateTime firsMonday)
-        {
-            int currenYear = firsMonday.Year;
-            while (firsMonday.Year)
-            {
-                Console.WriteLine($"第(i+1)周");
-                firsMonday = firsMonday.AddDays(7);
-                i++;
-            }
-            for (int i = 0; i < 365/7; i++)
-            {
+    //    static DateTime GetFirstMonday(int year)
+    //    {
+    //        DateTime date = new DateTime(year, 1, 1);
+    //        while (date.DayOfWeek != DayOfWeek.Monday)
+    //        {
+    //            date = date.AddDays(1);
+    //        }
+    //        return date;
+    //    } 
+    //    static DateTime ShowWeeks(DateTime firsMonday)
+    //    {
+    //        int currenYear = firsMonday.Year;
+    //        while (firsMonday.Year)
+    //        {
+    //            Console.WriteLine($"第(i+1)周");
+    //            firsMonday = firsMonday.AddDays(7);
+    //            i++;
+    //        }
+    //        for (int i = 0; i < 365/7; i++)
+    //        {
 
-            }
-            return firsMonday;
-        }
-    }
+    //        }
+    //        return firsMonday;
+    //    }
+    //}
 }

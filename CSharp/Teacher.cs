@@ -5,6 +5,9 @@ using System.Text;
 
 namespace CSharp
 {
-    
+    public class Teacher
+    {
+
+    }
    
 }
