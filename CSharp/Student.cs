@@ -7,7 +7,7 @@
 
     class Student
     {
-        public Role[] Roles { get; set; } = new Role[10];
+     
     }
 }
 
