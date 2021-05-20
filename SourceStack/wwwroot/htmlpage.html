@@ -79,13 +79,11 @@
         //}
 
         //声明一个数组odds，利用循环把100以内的奇数按从小到大的顺序存入其中
-        var odds = [], j = 0;
-        for (var i = 1; i < 100; i += 2) {
-            while (j < 50) {
-                odds[j] = i;
-                j++;
-                break;
-            }
+        var odds = [], index = 0, value = 0;
+        while (value < 99) {
+            value = 2 * index + 1;
+            odds[index] = value;
+            index++;
         }
         console.log(odds);
         //计算从odds数组中所有元素的和
@@ -95,6 +93,7 @@
         }
         console.log(sum);
         //找到数组中的最小值
+
         //去除一个数组中重复的值
     </script>
 
