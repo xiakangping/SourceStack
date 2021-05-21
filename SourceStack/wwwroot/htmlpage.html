@@ -102,6 +102,18 @@
         //}
         //console.log(min);
         //去除一个数组中重复的值
+        var numbers = [1, 5, 8, 15, -1, 52, 103, -5, -10, -10, 2];
+        for (var i = 0; i < numbers.length; i++) {
+            var target = -10;
+            if (numbers[i]==target) {
+                console.log(`${target}在第${i + 1}位`);
+                break;
+            } else if (target == numbers.length-1) {
+                console.log(-1);
+            }//else nothing
+            numbers[9] = undefined;       
+        }
+        console.log(numbers);
         //输出用空格代替0的杨辉三角形
         //var rows = 5, colums = rows * 2 - 1;
         //var yh = [];
@@ -122,6 +134,9 @@
         //    console.log(lines);
         //}
 
+        //输出1000以内的所有“素数 / 质数”（只能被自己和1整除的数）
+        //完成冒泡排序（必做，参考C#）
+        //完成：二分查找 / 快速排序（选做，参考C#）
         
     </script>
 
