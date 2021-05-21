@@ -111,7 +111,7 @@
         //    } else if (target == numbers.length-1) {
         //        console.log(-1);
         //    }//else nothing
-        //    numbers[9] = undefined;       
+        //    numbers[9] = undefined;
         //}
         //console.log(numbers);
         //输出用空格代替0的杨辉三角形
@@ -152,9 +152,21 @@
         //            }
         //        }
         //    }
+
         //完成冒泡排序（必做，参考C#）
-        //完成：二分查找 / 快速排序（选做，参考C#）
-        
+        var arr = [15, 3, -5, 7, 25, 13, 52, 112, 50, 87, 0, 5];
+        for (var i = 0; i <= arr.length - 1; i++) { //外层循环次数
+            for (var j = 0; j < arr.length - i - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
+                    var temp = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
+                }
+            }
+        }
+        console.log(arr);
+                    //完成：二分查找 / 快速排序（选做，参考C#）
+
     </script>
 
 </head>
