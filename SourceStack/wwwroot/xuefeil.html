@@ -3,18 +3,21 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-    <!--<script src="js/site.js"></script>-->
-    <script>
-        //使用“模拟名称空间”技术，构建一个函数函数yz.fei.get(number) ；
 
-        var yz = {};
-        yz.fei = {};
-        yz.fei.get = function (number) {
-            console.log('我是飞哥');
+    <script>
+        function main(func) {
+            var age = 25;
+            if (func(age) == true) {
+                console.log("恭喜可以退休");
+            } else {
+                console.log("不可以");
+            }
         }
-        yz.fei.get(''); 
-       
-      
+        main(tuixiu);
+
+        function tuixiu(age) {
+            return age > 60;
+        }
     </script>
 
 </head>

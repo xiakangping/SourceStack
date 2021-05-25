@@ -5,3 +5,5 @@ yz.fei.get = function (number) {
     console.log('我是飞哥');
 }
 yz.fei.get(''); 
+
+
