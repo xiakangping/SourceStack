@@ -3,199 +3,199 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <!--//分别使用setInterval()使用setTimeout()实现：每隔1秒钟依次显示：
+    //第n周，源栈同学random人。（n逐次递增，random随机）-->
+    <!--<script src="js/setInterval().js"></script>-->
+
     <!--<script src="/js/has6.js" type="text/javascript"></script>
     <script src="js/yz.fei.get.js"></script>-->
-      <!--使用“模拟名称空间”技术，构建一个函数函数yz.fei.get(number)；-->
-
-      <!--<script src="js/handler.js"></script>
+    <!--使用“模拟名称空间”技术，构建一个函数函数yz.fei.get(number)；-->
+    <!--<script src="js/handler.js"></script>
     回调函数handler能对number进行运算，并返回bool值的，比如has6()-->
     <script>
-        //使用JavaScript内置字符串函数，处理 “‘源栈’：飞哥小班教学，线下免费收看”
-        //：将“飞哥”改成“大神”，“线下”改成“线上”。
-        var str = "飞哥小班教学，线下免费收看";
-        "飞哥小班教学，线下免费收看".replace()
-       
-      
-       
+
         
-        //var greet = "路\n漫\n漫其修远兮";
-        //alert(greet);
-        //var sname = "夏康平";
-        //alert(sname);
-        //sname = "姜鹏";
-        //alert(sname);
-        //sname = "李腾";
-        //alert(sname);
-        //var problem = {
-        //    title,
-        //    body,
-        //    reward,
-        //    needRemote
-        //}
-        //用JavaScript变量pBody存储这行Html代码
-        //var pBody = "<a href='http://17bang.ren' target='_blank'>源栈·一起帮</a>，助你实现<span style='font - size: 16px; '>编程</span>梦想";
-        //alert(pBody);
 
 
-        //用一个变量替换“编程”，以便输出更多内容。比如：助你实现{ 职业 } 梦想、助你实现{ 人生 } 梦想
-        //var result = "职业";
-        //alert(`助你实现${result}梦想`);
-        //var result = "人生";
-        //alert(`助你实现${result} 梦想`);
+
+            //var greet = "路\n漫\n漫其修远兮";
+            //alert(greet);
+            //var sname = "夏康平";
+            //alert(sname);
+            //sname = "姜鹏";
+            //alert(sname);
+            //sname = "李腾";
+            //alert(sname);
+            //var problem = {
+            //    title,
+            //    body,
+            //    reward,
+            //    needRemote
+            //}
+            //用JavaScript变量pBody存储这行Html代码
+            //var pBody = "<a href='http://17bang.ren' target='_blank'>源栈·一起帮</a>，助你实现<span style='font - size: 16px; '>编程</span>梦想";
+            //alert(pBody);
 
 
-        //设计一段代码，实现以下逻辑：
-        //某用户有一定数量的帮帮豆（sum）
-        //每点赞一次就会消耗若干帮帮豆（consume）
-        //现在用户点赞若干次（count）
-        //计算用户剩余了多少帮帮豆（banlance）并用bool值显示他是否还有帮帮豆（isAvailable）
-        //var sum, consume, banlance, isAvailable;
-        //banlance = sum - (consume * count);
-        //isAvailable = banlance > 0 ? true : false;
+            //用一个变量替换“编程”，以便输出更多内容。比如：助你实现{ 职业 } 梦想、助你实现{ 人生 } 梦想
+            //var result = "职业";
+            //alert(`助你实现${result}梦想`);
+            //var result = "人生";
+            //alert(`助你实现${result} 梦想`);
 
 
-        //写一段代码，能根据一起帮用户的帮帮点（bCredit）输出他对应的等级（可适度精简）
-        //var weeks = 1;
-        //if (weeks >= 5000) {
-        //    console.log(`金童/玉女`);
-        //} else if (weeks >= 20000) {
-        //    console.log(`宝宝`);
-        //} else if (weeks >= 10000) {
-        //    console.log(`花开`);
-        //} else if (weeks >= 5000) {
-        //    console.log(`蓓蕾`);
-        //} else if (weeks >= 3000) {
-        //    console.log(`双叶`);
-        //} else if (weeks >= 1500) {
-        //    console.log(`单叶`);
-        //} else if (weeks >= 700) {
-        //    console.log(`萌芽`);
-        //} else if (weeks >= 200) {
-        //    console.log(`凝水`);
-        //} else if (weeks >= 100) {
-        //    console.log(`聚气`);
-        //} else if (weeks >= 30) {
-        //    console.log(`入门`);
-        //} else {
-        //    console.log(`加油升级`);
-        //}
-        //var weekday = 20;
-        //switch (weekday) {
-        //    case 1:
-        //        console.log("星期一");
-        //        break;
-        //    case 2:
-        //        console.log("星期二");
-        //        break;
-        //    default:
-        //        console.log("无法无天" + weekday)
-        //        break;
-        //}
+            //设计一段代码，实现以下逻辑：
+            //某用户有一定数量的帮帮豆（sum）
+            //每点赞一次就会消耗若干帮帮豆（consume）
+            //现在用户点赞若干次（count）
+            //计算用户剩余了多少帮帮豆（banlance）并用bool值显示他是否还有帮帮豆（isAvailable）
+            //var sum, consume, banlance, isAvailable;
+            //banlance = sum - (consume * count);
+            //isAvailable = banlance > 0 ? true : false;
 
-        //声明一个数组odds，利用循环把100以内的奇数按从小到大的顺序存入其中
-        //var odds = [], index = 0, value = 0;
-        //while (value < 99) {
-        //    value = 2 * index + 1;
-        //    odds[index] = value;
-        //    index++;
-        //}
-        //console.log(odds);
-        //计算从odds数组中所有元素的和
-        //var sum = 0;
-        //for (var i = 0; i < odds.length; i++) {
-        //    sum += odds[i];
-        //}
-        //console.log(sum);
-        //找到数组中的最小值
-        //var numbers = [1, 5, 8, 15, -1, 52, 103, -5, -10, 2, 5];
-        //var min = numbers[0];
-        //for (var i = 0; i < numbers.length; i++) {
-        //    if (min > numbers[i]) {
-        //        min = numbers[i]
-        //    }
-        //}
-        //console.log(min);
-        //去除一个数组中重复的值
-        //var numbers = [1, 5, 8, 15, -1, 52, 103, -5, -10, -10, 2];
-        //for (var i = 0; i < numbers.length; i++) {
-        //    var target = -10;
-        //    if (numbers[i] == target) {
-        //        console.log(`${target}在第${i + 1}位`);
-        //        break;
-        //    } else if (target == numbers.length - 1) {
-        //        console.log(-1);
-        //    }//else nothing
-        //    numbers[9] = undefined;
-        //}
-        //console.log(numbers);
-        //输出用空格代替0的杨辉三角形
-        //var rows = 5, colums = rows * 2 - 1;
-        //var yh = [];
-        //for (var i = 0; i < rows; i++) {
-        //    yh[i] = [];
-        //    var lines = '';
-        //    for (var j = 0; j < colums; j++) {
-        //        if (i == 0) {
-        //            yh[i][j] = (j == rows - 1) ? 1 : 0;
-        //        } else {
-        //            var preRow = i - 1;
-        //            preColumn = j - 1 >= 0 ? yh[preRow][j - 1] : 0,
-        //                nextColumn = j + 1 < colums ? yh[preRow][j + 1] : 0;
-        //            yh[i][j] = preColumn + nextColumn;
-        //        }
-        //        lines += yh[i][j] + '';
-        //    }
-        //    console.log(lines);
-        //}
 
-        //输出1000以内的所有“素数 / 质数”（只能被自己和1整除的数）
-        //for (var i = 2; i < 1000; i++) {
-        //    for (var j = 2; j < i; j++) {
-        //        if (i % j == 0) {
-        //            break;
-        //        }
-        //        else {
-        //            if (j == i - 1) {
-        //                console.log(i);;
-        //            }//else nothing
-        //        }
-        //    }
-        //}
+            //写一段代码，能根据一起帮用户的帮帮点（bCredit）输出他对应的等级（可适度精简）
+            //var weeks = 1;
+            //if (weeks >= 5000) {
+            //    console.log(`金童/玉女`);
+            //} else if (weeks >= 20000) {
+            //    console.log(`宝宝`);
+            //} else if (weeks >= 10000) {
+            //    console.log(`花开`);
+            //} else if (weeks >= 5000) {
+            //    console.log(`蓓蕾`);
+            //} else if (weeks >= 3000) {
+            //    console.log(`双叶`);
+            //} else if (weeks >= 1500) {
+            //    console.log(`单叶`);
+            //} else if (weeks >= 700) {
+            //    console.log(`萌芽`);
+            //} else if (weeks >= 200) {
+            //    console.log(`凝水`);
+            //} else if (weeks >= 100) {
+            //    console.log(`聚气`);
+            //} else if (weeks >= 30) {
+            //    console.log(`入门`);
+            //} else {
+            //    console.log(`加油升级`);
+            //}
+            //var weekday = 20;
+            //switch (weekday) {
+            //    case 1:
+            //        console.log("星期一");
+            //        break;
+            //    case 2:
+            //        console.log("星期二");
+            //        break;
+            //    default:
+            //        console.log("无法无天" + weekday)
+            //        break;
+            //}
 
-        //完成冒泡排序（必做，参考C#）
-        //var arr = [15, 3, -5, 7, 25, 13, 52, 112, 50, 87, 0, 5];
-        //for (var i = 0; i <= arr.length - 1; i++) {
+            //声明一个数组odds，利用循环把100以内的奇数按从小到大的顺序存入其中
+            //var odds = [], index = 0, value = 0;
+            //while (value < 99) {
+            //    value = 2 * index + 1;
+            //    odds[index] = value;
+            //    index++;
+            //}
+            //console.log(odds);
+            //计算从odds数组中所有元素的和
+            //var sum = 0;
+            //for (var i = 0; i < odds.length; i++) {
+            //    sum += odds[i];
+            //}
+            //console.log(sum);
+            //找到数组中的最小值
+            //var numbers = [1, 5, 8, 15, -1, 52, 103, -5, -10, 2, 5];
+            //var min = numbers[0];
+            //for (var i = 0; i < numbers.length; i++) {
+            //    if (min > numbers[i]) {
+            //        min = numbers[i]
+            //    }
+            //}
+            //console.log(min);
+            //去除一个数组中重复的值
+            //var numbers = [1, 5, 8, 15, -1, 52, 103, -5, -10, -10, 2];
+            //for (var i = 0; i < numbers.length; i++) {
+            //    var target = -10;
+            //    if (numbers[i] == target) {
+            //        console.log(`${target}在第${i + 1}位`);
+            //        break;
+            //    } else if (target == numbers.length - 1) {
+            //        console.log(-1);
+            //    }//else nothing
+            //    numbers[9] = undefined;
+            //}
+            //console.log(numbers);
+            //输出用空格代替0的杨辉三角形
+            //var rows = 5, colums = rows * 2 - 1;
+            //var yh = [];
+            //for (var i = 0; i < rows; i++) {
+            //    yh[i] = [];
+            //    var lines = '';
+            //    for (var j = 0; j < colums; j++) {
+            //        if (i == 0) {
+            //            yh[i][j] = (j == rows - 1) ? 1 : 0;
+            //        } else {
+            //            var preRow = i - 1;
+            //            preColumn = j - 1 >= 0 ? yh[preRow][j - 1] : 0,
+            //                nextColumn = j + 1 < colums ? yh[preRow][j + 1] : 0;
+            //            yh[i][j] = preColumn + nextColumn;
+            //        }
+            //        lines += yh[i][j] + '';
+            //    }
+            //    console.log(lines);
+            //}
 
-        //    for (var j = 0; j < arr.length - i - 1; j++) {
-        //        if (arr[j] > arr[j + 1]) {
-        //            var temp = arr[j];
-        //            arr[j] = arr[j + 1];
-        //            arr[j + 1] = temp;
-        //        }
-        //    }
-        //}
-        //console.log(arr);
+            //输出1000以内的所有“素数 / 质数”（只能被自己和1整除的数）
+            //for (var i = 2; i < 1000; i++) {
+            //    for (var j = 2; j < i; j++) {
+            //        if (i % j == 0) {
+            //            break;
+            //        }
+            //        else {
+            //            if (j == i - 1) {
+            //                console.log(i);;
+            //            }//else nothing
+            //        }
+            //    }
+            //}
 
-        //完成：二分查找 / 快速排序（选做，参考C#）
+            //完成冒泡排序（必做，参考C#）
+            //var arr = [15, 3, -5, 7, 25, 13, 52, 112, 50, 87, 0, 5];
+            //for (var i = 0; i <= arr.length - 1; i++) {
 
-        //var numbers = [-5, 1, 2, 3, 4, 5, 9, 10, 11, 15, 17, 23, 90, 101, 155];
-        //alert(binarySearch(numbers, 4));
-        //function binarySearch(arr, key) {
-        //    let low = 0;
-        //    let high = arr.length - 1;
-        //    while (low <= high) {
-        //        let mid = parseInt((high + low) / 2);
-        //        if (key === arr[mid]) {
-        //            return mid;
-        //        } else if (key > arr[mid]) {
-        //            low = mid + 1;
-        //        } else if (key < arr[mid]) {
-        //            high = mid - 1;
-        //        } else {
-        //            return -1;
-        //        }
-        //    }
-        //}
+            //    for (var j = 0; j < arr.length - i - 1; j++) {
+            //        if (arr[j] > arr[j + 1]) {
+            //            var temp = arr[j];
+            //            arr[j] = arr[j + 1];
+            //            arr[j + 1] = temp;
+            //        }
+            //    }
+            //}
+            //console.log(arr);
+
+            //完成：二分查找 / 快速排序（选做，参考C#）
+
+            //var numbers = [-5, 1, 2, 3, 4, 5, 9, 10, 11, 15, 17, 23, 90, 101, 155];
+            //alert(binarySearch(numbers, 4));
+            //function binarySearch(arr, key) {
+            //    let low = 0;
+            //    let high = arr.length - 1;
+            //    while (low <= high) {
+            //        let mid = parseInt((high + low) / 2);
+            //        if (key === arr[mid]) {
+            //            return mid;
+            //        } else if (key > arr[mid]) {
+            //            low = mid + 1;
+            //        } else if (key < arr[mid]) {
+            //            high = mid - 1;
+            //        } else {
+            //            return -1;
+            //        }
+            //    }
+            //}
 
     </script>
 

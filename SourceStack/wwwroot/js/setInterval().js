@@ -1,10 +1,5 @@
-﻿var numb = 1;
-while (numb < 10) {
-    setTimeout(function () {
-        console.log("第" + numb + "周，源栈同学" + Math.floor(Math.random() * 100));
-        console.log(new Date());
-        numb += 1;
-    },
-        1000
-    );
-};
+﻿var timerId = setInterval(
+    function () {
+        console.log(`第n周，源栈同学random人`);
+    }
+    , 1000);
